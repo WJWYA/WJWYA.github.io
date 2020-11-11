@@ -351,15 +351,15 @@
         <p>&emsp;&emsp;Markdown是一种轻量级标记语言，创始人为约翰·格鲁伯（英语：John Gruber）。 它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML（或者HTML）文档。这种语言吸收了很多在电子邮件中已有的纯文本标记的特性。<br>&emsp;&emsp;由于Markdown的轻量化、易读易写特性，并且对于图片，图表、数学式都有支持，目前许多网站都广泛使用Markdown来撰写帮助文档或是用于论坛上发表消息。 如GitHub、Reddit、Diaspora、Stack Exchange、OpenStreetMap 、SourceForge、简书等，甚至还能被使用来撰写电子书。</p>
 <hr>
 <h2 id="markdown基本用法"><a href="#markdown基本用法" class="headerlink" title="markdown基本用法"></a>markdown基本用法</h2><h3 id="标题类型"><a href="#标题类型" class="headerlink" title="标题类型"></a>标题类型</h3><hr>
-<h4 id="标题H1"><a href="#标题H1" class="headerlink" title="标题H1"></a>标题H1</h4><pre><code class="markdown">#标题H1 </code></pre>
-<h4 id="标题H2"><a href="#标题H2" class="headerlink" title="标题H2"></a>标题H2</h4><pre><code class="markdown">##标题H2 </code></pre>
-<h4 id="标题H6"><a href="#标题H6" class="headerlink" title="标题H6"></a>标题H6</h4><pre><code class="markdown">######标题H6 </code></pre>
+<h4 id="标题H1"><a href="#标题H1" class="headerlink" title="标题H1"></a>标题H1</h4><pre class=" language-markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">#</span>标题H1 </span></code></pre>
+<h4 id="标题H2"><a href="#标题H2" class="headerlink" title="标题H2"></a>标题H2</h4><pre class=" language-markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">##</span>标题H2 </span></code></pre>
+<h4 id="标题H6"><a href="#标题H6" class="headerlink" title="标题H6"></a>标题H6</h4><pre class=" language-markdown"><code class="language-markdown"><span class="token title important"><span class="token punctuation">######</span>标题H6 </span></code></pre>
 <h3 id="字符效果和横线等"><a href="#字符效果和横线等" class="headerlink" title="字符效果和横线等"></a>字符效果和横线等</h3><hr>
-<h4 id="删除线-删除线（开启识别HTML标签时）"><a href="#删除线-删除线（开启识别HTML标签时）" class="headerlink" title="删除线 删除线（开启识别HTML标签时）"></a><del>删除线</del> <s>删除线（开启识别HTML标签时）</s></h4><pre><code class="markdown">~~删除线~~ &lt;s&gt;删除线（开启识别HTML标签时）&lt;/s&gt; </code></pre>
-<h4 id="斜体字-斜体字"><a href="#斜体字-斜体字" class="headerlink" title="斜体字 斜体字"></a><em>斜体字</em> <em>斜体字</em></h4><pre><code class="markdown">*斜体字* _斜体字_ </code></pre>
-<h4 id="粗体-粗体"><a href="#粗体-粗体" class="headerlink" title="粗体 粗体"></a><strong>粗体</strong> <strong>粗体</strong></h4><pre><code class="markdown">**粗体** __粗体__ </code></pre>
-<h4 id="粗斜体-粗斜体"><a href="#粗斜体-粗斜体" class="headerlink" title="粗斜体 粗斜体"></a><strong><em>粗斜体</em></strong> <strong><em>粗斜体</em></strong></h4><pre><code class="markdown">***粗斜体*** ___粗斜体___ </code></pre>
-<h4 id="上标：X2，下标：O2"><a href="#上标：X2，下标：O2" class="headerlink" title="上标：X2，下标：O2"></a>上标：X<sub>2</sub>，下标：O<sup>2</sup></h4><pre><code class="markdown">上标：X&lt;sub&gt;2&lt;/sub&gt;，下标：O&lt;sup&gt;2&lt;/sup&gt; </code></pre>
+<h4 id="删除线-删除线（开启识别HTML标签时）"><a href="#删除线-删除线（开启识别HTML标签时）" class="headerlink" title="删除线 删除线（开启识别HTML标签时）"></a><del>删除线</del> <s>删除线（开启识别HTML标签时）</s></h4><pre class=" language-markdown"><code class="language-markdown">~~删除线~~ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>s</span><span class="token punctuation">></span></span>删除线（开启识别HTML标签时）<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>s</span><span class="token punctuation">></span></span> </code></pre>
+<h4 id="斜体字-斜体字"><a href="#斜体字-斜体字" class="headerlink" title="斜体字 斜体字"></a><em>斜体字</em> <em>斜体字</em></h4><pre class=" language-markdown"><code class="language-markdown"><span class="token italic"><span class="token punctuation">*</span>斜体字<span class="token punctuation">*</span></span> <span class="token italic"><span class="token punctuation">_</span>斜体字<span class="token punctuation">_</span></span> </code></pre>
+<h4 id="粗体-粗体"><a href="#粗体-粗体" class="headerlink" title="粗体 粗体"></a><strong>粗体</strong> <strong>粗体</strong></h4><pre class=" language-markdown"><code class="language-markdown"><span class="token bold"><span class="token punctuation">**</span>粗体<span class="token punctuation">**</span></span> <span class="token bold"><span class="token punctuation">__</span>粗体<span class="token punctuation">__</span></span> </code></pre>
+<h4 id="粗斜体-粗斜体"><a href="#粗斜体-粗斜体" class="headerlink" title="粗斜体 粗斜体"></a><strong><em>粗斜体</em></strong> <strong><em>粗斜体</em></strong></h4><pre class=" language-markdown"><code class="language-markdown"><span class="token bold"><span class="token punctuation">**</span>*粗斜体<span class="token punctuation">**</span></span>* <span class="token bold"><span class="token punctuation">__</span>_粗斜体<span class="token punctuation">__</span></span>_ </code></pre>
+<h4 id="上标：X2，下标：O2"><a href="#上标：X2，下标：O2" class="headerlink" title="上标：X2，下标：O2"></a>上标：X<sub>2</sub>，下标：O<sup>2</sup></h4><pre class=" language-markdown"><code class="language-markdown">上标：X<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sub</span><span class="token punctuation">></span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sub</span><span class="token punctuation">></span></span>，下标：O<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sup</span><span class="token punctuation">></span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sup</span><span class="token punctuation">></span></span> </code></pre>
 <h4 id="缩写-同HTML的abbr标签"><a href="#缩写-同HTML的abbr标签" class="headerlink" title="缩写(同HTML的abbr标签)"></a><strong>缩写(同HTML的abbr标签)</strong></h4><blockquote>
 <p>即更长的单词或短语的缩写形式，前提是开启识别HTML标签时，已默认开启<br>The <abbr title="Hyper Text Markup Language">HTML</abbr> specification is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>. </p>
 </blockquote>
@@ -372,7 +372,7 @@ The &lt;abbr title=&quot;Hyper Text Markup Language&quot;&gt;HTML&lt;/abbr&gt; s
 <pre><code>&gt; 引用文本 Blockquotes 
 引用的行内混合 Blockquotes 
 &gt; 引用：如果想要插入空白换行`即&lt;br /&gt;标签`，在插入处先键入两个以上的空格然后回车即可，[普通链接](https://www.mdeditor.com/)。 </code></pre>
-<h3 id="锚点与链接-Links"><a href="#锚点与链接-Links" class="headerlink" title="锚点与链接 Links"></a>锚点与链接 Links</h3><p><a href="https://www.mdeditor.com/" target="_blank" rel="noopener">普通链接</a><br><a href="https://www.mdeditor.com/" target="_blank" rel="noopener" title="普通链接带标题">普通链接带标题</a><br>直接链接：<a href="https://www.mdeditor.com/" target="_blank" rel="noopener">https://www.mdeditor.com</a><br>[锚点链接][anchor-id]<br>[anchor-id]: <a href="https://www.mdeditor.com/" target="_blank" rel="noopener">https://www.mdeditor.com/</a><br><a href="mailto:test.test@gmail.com">mailto:test.test@gmail.com</a><br>GFM a-tail link @pandao<br>邮箱地址自动链接 <a href="mailto:&#x74;&#x65;&#115;&#x74;&#x2e;&#116;&#x65;&#115;&#x74;&#x40;&#x67;&#109;&#x61;&#x69;&#x6c;&#46;&#x63;&#111;&#109;">&#x74;&#x65;&#115;&#x74;&#x2e;&#116;&#x65;&#115;&#x74;&#x40;&#x67;&#109;&#x61;&#x69;&#x6c;&#46;&#x63;&#111;&#109;</a> www@vip.qq.com </p>
+<h3 id="锚点与链接-Links"><a href="#锚点与链接-Links" class="headerlink" title="锚点与链接 Links"></a>锚点与链接 Links</h3><p><a href="https://www.mdeditor.com/" target="_blank" rel="noopener">普通链接</a><br><a href="https://www.mdeditor.com/" target="_blank" rel="noopener" title="普通链接带标题">普通链接带标题</a><br>直接链接：<a href="https://www.mdeditor.com/" target="_blank" rel="noopener">https://www.mdeditor.com</a><br>[锚点链接][anchor-id]<br>[anchor-id]: <a href="https://www.mdeditor.com/" target="_blank" rel="noopener">https://www.mdeditor.com/</a><br><a href="mailto:test.test@gmail.com">mailto:test.test@gmail.com</a><br>GFM a-tail link @pandao<br>邮箱地址自动链接 <a href="mailto:&#116;&#x65;&#115;&#x74;&#x2e;&#116;&#101;&#x73;&#116;&#x40;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;">&#116;&#x65;&#115;&#x74;&#x2e;&#116;&#101;&#x73;&#116;&#x40;&#103;&#x6d;&#97;&#x69;&#x6c;&#x2e;&#99;&#111;&#x6d;</a> www@vip.qq.com </p>
 <blockquote>
 <p>@pandao </p>
 </blockquote>
@@ -390,28 +390,28 @@ GFM a-tail link @pandao
 <h4 id="缩进风格"><a href="#缩进风格" class="headerlink" title="缩进风格"></a>缩进风格</h4><p>即缩进四个空格，也做为实现类似 <code>&lt;pre&gt;</code> 预格式化文本 ( Preformatted Text ) 的功能。<br><?php 
 echo "Hello world!"; 
 ?> </p>
-<h4 id="JS代码"><a href="#JS代码" class="headerlink" title="JS代码"></a>JS代码</h4><pre><code class="javascript">function test() { 
-console.log(&quot;Hello world!&quot;); 
-} </code></pre>
-<h4 id="HTML-代码-HTML-codes"><a href="#HTML-代码-HTML-codes" class="headerlink" title="HTML 代码 HTML codes"></a>HTML 代码 HTML codes</h4><pre><code class="html">&lt;!DOCTYPE html&gt; 
-&lt;html&gt; 
-&lt;head&gt; 
-&lt;mate charest=&quot;utf-8&quot; /&gt; 
-&lt;meta name=&quot;keywords&quot; content=&quot;Editor.md, Markdown, Editor&quot; /&gt; 
-&lt;title&gt;Hello world!&lt;/title&gt; 
-&lt;style type=&quot;text/css&quot;&gt; 
-body{font-size:14px;color:#444;font-family: &quot;Microsoft Yahei&quot;, Tahoma, &quot;Hiragino Sans GB&quot;, Arial;background:#fff;} 
-ul{list-style: none;} 
-img{border:none;vertical-align: middle;} 
-&lt;/style&gt; 
-&lt;/head&gt; 
-&lt;body&gt; 
-&lt;h1 class=&quot;text-xxl&quot;&gt;Hello world!&lt;/h1&gt; 
-&lt;p class=&quot;text-green&quot;&gt;Plain text&lt;/p&gt; 
-&lt;/body&gt; 
-&lt;/html&gt; </code></pre>
+<h4 id="JS代码"><a href="#JS代码" class="headerlink" title="JS代码"></a>JS代码</h4><pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">test</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Hello world!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span> </code></pre>
+<h4 id="HTML-代码-HTML-codes"><a href="#HTML-代码-HTML-codes" class="headerlink" title="HTML 代码 HTML codes"></a>HTML 代码 HTML codes</h4><pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>mate</span> <span class="token attr-name">charest</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>keywords<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Editor.md, Markdown, Editor<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Hello world!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token style language-css"> 
+<span class="token selector">body</span><span class="token punctuation">{</span><span class="token property">font-size</span><span class="token punctuation">:</span><span class="token number">14</span>px<span class="token punctuation">;</span><span class="token property">color</span><span class="token punctuation">:</span><span class="token hexcode">#444</span><span class="token punctuation">;</span><span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">"Microsoft Yahei"</span>, Tahoma, <span class="token string">"Hiragino Sans GB"</span>, Arial<span class="token punctuation">;</span><span class="token property">background</span><span class="token punctuation">:</span><span class="token hexcode">#fff</span><span class="token punctuation">;</span><span class="token punctuation">}</span> 
+<span class="token selector">ul</span><span class="token punctuation">{</span><span class="token property">list-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span><span class="token punctuation">}</span> 
+<span class="token selector">img</span><span class="token punctuation">{</span><span class="token property">border</span><span class="token punctuation">:</span>none<span class="token punctuation">;</span><span class="token property">vertical-align</span><span class="token punctuation">:</span> middle<span class="token punctuation">;</span><span class="token punctuation">}</span> 
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text-xxl<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Hello world!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text-green<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Plain text<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span> </code></pre>
 <h3 id="图片-Images"><a href="#图片-Images" class="headerlink" title="图片 Images"></a>图片 Images</h3><p>图片加链接 (Image + Link)：<br><a href="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2070880253,894883739&fm=26&gp=0.jpg" target="_blank" rel="noopener" title="markdown"><img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2070880253,894883739&fm=26&gp=0.jpg"></a> </p>
-<pre><code class="markdown">[![](https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2070880253,894883739&amp;fm=26&amp;gp=0.jpg)](https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2070880253,894883739&amp;fm=26&amp;gp=0.jpg &quot;markdown&quot;) </code></pre>
+<pre class=" language-markdown"><code class="language-markdown">[![](https://ss0.bdstatic.com/70cFuHSh<span class="token italic"><span class="token punctuation">_</span>Q1YnxGkpoWK1HF6hhy/it/u=2070880253,894883739&amp;fm=26&amp;gp=0.jpg)](https://ss0.bdstatic.com/70cFuHSh<span class="token punctuation">_</span></span>Q1YnxGkpoWK1HF6hhy/it/u=2070880253,894883739&amp;fm=26&amp;gp=0.jpg "markdown") </code></pre>
 <hr>
 <h3 id="GFM-task-list"><a href="#GFM-task-list" class="headerlink" title="GFM task list"></a>GFM task list</h3><ul>
 <li><input checked="" disabled="" type="checkbox"> GFM task list 1 </li>
@@ -425,16 +425,16 @@ img{border:none;vertical-align: middle;}
 <li><input disabled="" type="checkbox"> GFM task list 4-2 </li>
 </ul>
 <hr>
-<pre><code class="markdown">- [x] GFM task list 1 
-- [x] GFM task list 2 
-- [ ] GFM task list 3 
-- [ ] GFM task list 3-1 
-- [ ] GFM task list 3-2 
-- [ ] GFM task list 3-3 
-- [ ] GFM task list 4 
-- [ ] GFM task list 4-1 
-- [ ] GFM task list 4-2 
----- </code></pre>
+<pre class=" language-markdown"><code class="language-markdown"><span class="token list punctuation">-</span> [x] GFM task list 1 
+<span class="token list punctuation">-</span> [x] GFM task list 2 
+<span class="token list punctuation">-</span> [ ] GFM task list 3 
+<span class="token list punctuation">-</span> [ ] GFM task list 3-1 
+<span class="token list punctuation">-</span> [ ] GFM task list 3-2 
+<span class="token list punctuation">-</span> [ ] GFM task list 3-3 
+<span class="token list punctuation">-</span> [ ] GFM task list 4 
+<span class="token list punctuation">-</span> [ ] GFM task list 4-1 
+<span class="token list punctuation">-</span> [ ] <span class="token title important">GFM task list 4-2 
+<span class="token punctuation">----</span></span> </code></pre>
 <h3 id="绘制表格-Tables"><a href="#绘制表格-Tables" class="headerlink" title="绘制表格 Tables"></a>绘制表格 Tables</h3><table>
 <thead>
 <tr>
@@ -459,7 +459,7 @@ img{border:none;vertical-align: middle;}
 <td align="center">234</td>
 </tr>
 </tbody></table>
-<pre><code class="markdown">| 项目 | 价格 | 数量 | 
+<pre class=" language-markdown"><code class="language-markdown">| 项目 | 价格 | 数量 | 
 | -------- | -----: | :----: | 
 | 计算机 | $1600 | 5 | 
 | 手机 | $12 | 12 | 
@@ -480,8 +480,8 @@ img{border:none;vertical-align: middle;}
 <td>Content Cell</td>
 </tr>
 </tbody></table>
-<pre><code class="markdown">First Header | Second Header 
-------------- | ------------- 
+<pre class=" language-markdown"><code class="language-markdown"><span class="token title important">First Header | Second Header 
+<span class="token punctuation">-------------</span></span> | ------------- 
 Content Cell | Content Cell 
 Content Cell | Content Cell </code></pre>
 <table>
@@ -500,7 +500,7 @@ Content Cell | Content Cell </code></pre>
 <td>Content Cell</td>
 </tr>
 </tbody></table>
-<pre><code class="markdown">| First Header | Second Header | 
+<pre class=" language-markdown"><code class="language-markdown">| First Header | Second Header | 
 | ------------- | ------------- | 
 | Content Cell | Content Cell | 
 | Content Cell | Content Cell | </code></pre>
@@ -520,10 +520,10 @@ Content Cell | Content Cell </code></pre>
 <td><strong>Destroy your computer!</strong></td>
 </tr>
 </tbody></table>
-<pre><code class="markdown">| Function name | Description | 
+<pre class=" language-markdown"><code class="language-markdown">| Function name | Description | 
 | ------------- | ------------------------------ | 
-| `help()` | Display the help window. | 
-| `destroy()` | **Destroy your computer!** | </code></pre>
+| <span class="token code keyword">`help()`</span> | Display the help window. | 
+| <span class="token code keyword">`destroy()`</span> | <span class="token bold"><span class="token punctuation">**</span>Destroy your computer!<span class="token punctuation">**</span></span> | </code></pre>
 <table>
 <thead>
 <tr>
@@ -548,7 +548,7 @@ Content Cell | Content Cell </code></pre>
 <td align="right">$1</td>
 </tr>
 </tbody></table>
-<pre><code class="markdown">| Left-Aligned | Center Aligned | Right Aligned | 
+<pre class=" language-markdown"><code class="language-markdown">| Left-Aligned | Center Aligned | Right Aligned | 
 | :------------ |:---------------:| -----:| 
 | col 3 is | some wordy text | $1600 | 
 | col 2 is | centered | $12 | 
@@ -573,17 +573,17 @@ Content Cell | Content Cell </code></pre>
 <td align="right">$1</td>
 </tr>
 </tbody></table>
-<pre><code class="markdown">| Item | Value | 
+<pre class=" language-markdown"><code class="language-markdown">| Item | Value | 
 | --------- | -----:| 
 | Computer | $1600 | 
 | Phone | $12 | 
 | Pipe | $1 | </code></pre>
 <hr>
 <h4 id="特殊符号-HTML-Entities-Codes"><a href="#特殊符号-HTML-Entities-Codes" class="headerlink" title="特殊符号 HTML Entities Codes"></a>特殊符号 HTML Entities Codes</h4><p>&copy; &amp; ¨ ™ ¡ £<br>&amp; &lt; &gt; ¥ € ® ± ¶ § ¦ ¯ « ·<br>X&sup2; Y³ ¾ ¼ × ÷ »<br>18&ordm;C “ ‘<br>[========] </p>
-<pre><code class="markdown">&amp;copy; &amp; ¨ ™ ¡ £ 
-&amp;amp; &lt; &gt; ¥ € ® ± ¶ § ¦ ¯ « · 
-X&amp;sup2; Y³ ¾ ¼ × ÷ » 
-18&amp;ordm;C &quot; &#39; 
+<pre class=" language-markdown"><code class="language-markdown"><span class="token entity" title="&copy;">&amp;copy;</span> &amp; ¨ ™ ¡ £ 
+<span class="token entity" title="&amp;">&amp;amp;</span> &lt; > ¥ € ® ± ¶ § ¦ ¯ « · 
+X<span class="token entity" title="&sup2;">&amp;sup2;</span> Y³ ¾ ¼ × ÷ » 
+18<span class="token entity" title="&ordm;">&amp;ordm;</span>C " ' 
 [========] </code></pre>
 <h3 id="End"><a href="#End" class="headerlink" title="End"></a>End</h3>
       </div>
