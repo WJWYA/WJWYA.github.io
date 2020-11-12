@@ -10,7 +10,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>test | WyaBlog</title>
+  <title>position定位用法复习及Flex布局学习 | WyaBlog</title>
   
     
 <link rel="stylesheet" href="/js/aos/aos.css">
@@ -309,10 +309,10 @@
       
 
 
-<div class="post-detail-header" style="background: url(/medias/14.png) no-repeat; background-size: cover; 
+<div class="post-detail-header" style="background: url(https://s3.ax1x.com/2020/11/12/BzrUuF.png) no-repeat; background-size: cover; 
   background-position: center center;">
   
-    <span class="title">test</span>
+    <span class="title">position定位用法复习及Flex布局学习</span>
   
 </div>
 <div class="row justify-center">
@@ -322,18 +322,139 @@
       
       <div class="post-meta">
         <i class="fa fa-clock-o" aria-hidden="true"></i>
-        <span class="post-time">2020-11-11</span>
+        <span class="post-time">2020-11-12</span>
       </div>
       
       <div class="post-tags-categories">
         
+        <div class="tags">
+          <i class="iconfont icontag"></i>
+          
+            <a href="/tags/positiond%E5%AE%9A%E4%BD%8D/" class="">
+              positiond定位
+            </a>
+          
+            <a href="/tags/flex%E5%B8%83%E5%B1%80/" class="">
+              flex布局
+            </a>
+          
+        </div>
+        
+        
+        <div class="categories">
+          <i class="iconfont iconbookmark1"></i>
+          
+            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="">
+              技术
+            </a>
+          
+        </div>
         
       </div>
       <div class="post-content">
-        <pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.name111</span></span><span class="token punctuation">{</span>
-    <span class="token property">color</span><span class="token punctuation">:</span>blue<span class="token punctuation">;</span>
-<span class="token punctuation">}</span></code></pre>
-
+        <p>&emsp;&emsp;我之前一直对position属性的relative值（相对定位）和absolute值（绝对定位）用法比较模糊，一直是用什么查什么，没有去深刻的理解。今天对position属性和Flex布局进行了系统全面学习和理解。</p>
+<hr>
+<h2 id="position定位"><a href="#position定位" class="headerlink" title="position定位"></a>position定位</h2><p>&emsp;&emsp;position属性指定一个元素（静态的，相对的，绝对或固定）的定位方法的类型。</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>static</td>
+<td>默认值。没有定位，元素出现在正常的流中<br>（忽略top，bottom，left，right或者z-index声明）</td>
+</tr>
+<tr>
+<td>fixed</td>
+<td>生成绝对定位的元素，相对于浏览器窗口进行定位 <br>元素的位置通过left，top，bottom以及right属性进行规定</td>
+</tr>
+<tr>
+<td>absolute</td>
+<td>生成绝对定位的元素，相对于static定位以外的第一个父元素进行定位<br>元素的位置通过left，top，bottom以及right属性进行规定</td>
+</tr>
+<tr>
+<td>relative</td>
+<td>生成相对定位的元素，相对于其自身正常位置进行定位<br>例如，”left:10px”会像元素的左侧位置添加20个像素</td>
+</tr>
+</tbody></table>
+<h3 id="position-relative（相对定位）"><a href="#position-relative（相对定位）" class="headerlink" title="position:relative（相对定位）"></a>position:relative（相对定位）</h3><blockquote>
+<p>以当前为参照物移动指定的距离,即为相对于该元素在文档流（normal flow）的原位置来定位。<br><strong>注意</strong>：被定位的元素会占据原有的物理位置。</p>
+</blockquote>
+<pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width, initial-scale<span class="token punctuation">=</span>1.0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>CSS Crash Course<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style language-css">
+        <span class="token selector"><span class="token id">#box</span></span><span class="token punctuation">{</span>
+            <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">300</span>px<span class="token punctuation">;</span>
+            <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">600</span>px<span class="token punctuation">;</span>
+            <span class="token property">background-color</span><span class="token punctuation">:</span> cadetblue<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token selector"><span class="token id">#box</span>>div<span class="token pseudo-class">:nth-child(1)</span></span><span class="token punctuation">{</span>
+            <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+            <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">500</span>px<span class="token punctuation">;</span>
+            <span class="token property">background-color</span><span class="token punctuation">:</span> brown<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token selector"><span class="token id">#box</span>>div<span class="token pseudo-class">:nth-child(2)</span></span><span class="token punctuation">{</span>
+            <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+            <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">500</span>px<span class="token punctuation">;</span>
+            <span class="token property">background-color</span><span class="token punctuation">:</span> darkorange<span class="token punctuation">;</span>
+            <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*这里添加了relation*/</span>
+        <span class="token punctuation">}</span>
+        <span class="token selector"><span class="token id">#box</span>>div<span class="token pseudo-class">:nth-child(3)</span></span><span class="token punctuation">{</span>
+            <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+            <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">500</span>px<span class="token punctuation">;</span>
+            <span class="token property">background-color</span><span class="token punctuation">:</span> darkgreen<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<p><img src="https://s3.ax1x.com/2020/11/12/BzNsaV.jpg"><br>虽然对<code>#box&gt;div:nth-child(2)</code>添加了position:relative，但没有对对其设置left，top等属性，因此它会出现在normal flow中的正常位置。<br>对<code>#box&gt;div:nth-child(2)</code>进行修改，添加top，left属性：</p>
+<pre class=" language-css"><code class="language-css">  <span class="token selector"><span class="token id">#box</span>>div<span class="token pseudo-class">:nth-child(2)</span></span><span class="token punctuation">{</span>
+            <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+            <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">500</span>px<span class="token punctuation">;</span>
+            <span class="token property">background-color</span><span class="token punctuation">:</span> darkorange<span class="token punctuation">;</span>
+            <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*这里添加了relation*/</span>
+            <span class="token property">left</span><span class="token punctuation">:</span><span class="token number">50</span>px<span class="token punctuation">;</span>
+            <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">50</span>px<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span></code></pre>
+<p><img src="https://s3.ax1x.com/2020/11/12/BzNHPO.jpg"><br>从该图片可以看出box下的第2个div元素的位置相对于其原来的位置进行了移动。</p>
+<h3 id="position-absolute（绝对定位）"><a href="#position-absolute（绝对定位）" class="headerlink" title="position:absolute（绝对定位）"></a>position:absolute（绝对定位）</h3><blockquote>
+<p>绝对定位的元素不会占据原有的物理位置,是通过指定元素相对于最近的非static定位的父元素来确定元素位置的定位方式。<br><strong>关于绝对定位的参考点</strong>：</p>
+<ol>
+<li>如果元素的外层元素是非static（有了除默认值之外的定位设置），那么这个外层元素就成为该元素的定位参考点。</li>
+<li>如果元素的外层元素没有设置任何的position的值，那么该元素将寻找距离自己最近的其他设定过position的外层元素作为参照物体（必须为嵌套层）。</li>
+<li>如果该元素的外层元素没有任何一个元素采用position定位，那么此时定位参考元素变为body或者页面.<br>仅修改<code>#box&gt;div:nth-child(2)</code>的position属性值为absolute，不对其父元素进行修改：</li>
+</ol>
+</blockquote>
+<pre class=" language-css"><code class="language-css"> <span class="token selector"><span class="token id">#box</span>>div<span class="token pseudo-class">:nth-child(2)</span></span><span class="token punctuation">{</span>
+            <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+            <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">500</span>px<span class="token punctuation">;</span>
+            <span class="token property">background-color</span><span class="token punctuation">:</span> darkorange<span class="token punctuation">;</span>
+            <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*这里修改为absolute*/</span>
+            <span class="token property">left</span><span class="token punctuation">:</span><span class="token number">50</span>px<span class="token punctuation">;</span>
+            <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">50</span>px<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span></code></pre>
+<p><img src="https://s3.ax1x.com/2020/11/12/BzBwMF.png"><br>从图片中可以看出，box下的第2个div元素的位置相对于页面左边和顶部的距离为50px，且不在normal flow中。<br>在<code>#box</code>中添加position非static值：</p>
+<pre class=" language-css"><code class="language-css"> <span class="token selector"><span class="token id">#box</span></span><span class="token punctuation">{</span>
+            <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">300</span>px<span class="token punctuation">;</span>
+            <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">600</span>px<span class="token punctuation">;</span>
+            <span class="token property">background-color</span><span class="token punctuation">:</span> cadetblue<span class="token punctuation">;</span>
+            <span class="token property">position</span><span class="token punctuation">:</span>relative<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span></code></pre>
+<p><img src="https://s3.ax1x.com/2020/11/12/BzBgG6.png"><br>从图片中可以看出，box下的第2个div元素的位置相对与其父元素<code>box</code>的左边和顶部的距离为50px。</p>
+<h3 id="position-static-静态定位"><a href="#position-static-静态定位" class="headerlink" title="position:static(静态定位)"></a>position:static(静态定位)</h3><h3 id="positon-fixed-固定定位"><a href="#positon-fixed-固定定位" class="headerlink" title="positon:fixed(固定定位)"></a>positon:fixed(固定定位)</h3><h2 id="Flex布局"><a href="#Flex布局" class="headerlink" title="Flex布局"></a>Flex布局</h2>
       </div>
       
         <div class="copyright">
@@ -343,7 +464,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/2020/11/11/test/" target="_blank" title="test">https://WJWYA.github.io/2020/11/11/test/</a>
+    <a href="/2020/11/12/position-flex/" target="_blank" title="position定位用法复习及Flex布局学习">https://WJWYA.github.io/2020/11/12/position-flex/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -358,18 +479,12 @@
     
       <div class="post-nav">
 
-  <div class="post-nav-prev post-nav-item">
-    <a href="/2020/11/12/position-flex/">
-      上一篇:    position定位用法复习及Flex布局学习
-    </a>
-  </div>
-
 
 
   <div class="post-nav-next post-nav-item">
-    <a href="/2020/11/10/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/">
+    <a href="/2020/11/11/test/">
       <span>
-        下一篇:    音乐播放器 
+        下一篇:    test 
       </span>
     </a>
   </div>
