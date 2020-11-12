@@ -433,9 +433,9 @@
 <h3 id="position-absolute（绝对定位）"><a href="#position-absolute（绝对定位）" class="headerlink" title="position:absolute（绝对定位）"></a>position:absolute（绝对定位）</h3><blockquote>
 <p>绝对定位的元素不会占据原有的物理位置,是通过指定元素相对于最近的非static定位的父元素来确定元素位置的定位方式。<br><strong>关于绝对定位的参考点</strong>：</p>
 <ol>
-<li>如果元素的外层元素是非static（有了除默认值之外的定位设置），那么这个外层元素就成为该元素的定位参考点。</li>
-<li>如果元素的外层元素没有设置任何的position的值，那么该元素将寻找距离自己最近的其他设定过position的外层元素作为参照物体（必须为嵌套层）。</li>
-<li>如果该元素的外层元素没有任何一个元素采用position定位，那么此时定位参考元素变为body或者页面.<br>仅修改<code>#box&gt;div:nth-child(2)</code>的position属性值为absolute，不对其父元素进行修改：</li>
+<li>（1）如果元素的外层元素是非static（有了除默认值之外的定位设置），那么这个外层元素就成为该元素的定位参考点。</li>
+<li>（2）如果元素的外层元素没有设置任何的position的值，那么该元素将寻找距离自己最近的其他设定过position的外层元素作为参照物体（必须为嵌套层）。</li>
+<li>（3）如果该元素的外层元素没有任何一个元素采用position定位，那么此时定位参考元素变为body或者页面.<br>仅修改<code>#box&gt;div:nth-child(2)</code>的position属性值为absolute，不对其父元素进行修改：</li>
 </ol>
 </blockquote>
 <pre class=" language-css"><code class="language-css"> <span class="token selector"><span class="token id">#box</span>>div<span class="token pseudo-class">:nth-child(2)</span></span><span class="token punctuation">{</span>
@@ -454,7 +454,52 @@
             <span class="token property">position</span><span class="token punctuation">:</span>relative<span class="token punctuation">;</span>
         <span class="token punctuation">}</span></code></pre>
 <p><img src="https://s3.ax1x.com/2020/11/12/BzBgG6.png"><br>从图片中可以看出，box下的第2个div元素的位置相对与其父元素<code>box</code>的左边和顶部的距离为50px。</p>
-<h3 id="position-static-静态定位"><a href="#position-static-静态定位" class="headerlink" title="position:static(静态定位)"></a>position:static(静态定位)</h3><h3 id="positon-fixed-固定定位"><a href="#positon-fixed-固定定位" class="headerlink" title="positon:fixed(固定定位)"></a>positon:fixed(固定定位)</h3><h2 id="Flex布局"><a href="#Flex布局" class="headerlink" title="Flex布局"></a>Flex布局</h2>
+<h3 id="position-static-静态定位"><a href="#position-static-静态定位" class="headerlink" title="position:static(静态定位)"></a>position:static(静态定位)</h3><blockquote>
+<p>静态定位指定元素使用正常的布局行为，即元素在文档常规流中当前的布局位置。此时 top、right、bottom、left 属性无效。</p>
+</blockquote>
+<pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width, initial-scale<span class="token punctuation">=</span>1.0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>static <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style language-css">
+    <span class="token selector"><span class="token id">#box</span></span><span class="token punctuation">{</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">300</span>px<span class="token punctuation">;</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+        <span class="token property">background-color</span><span class="token punctuation">:</span> cadetblue<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector"><span class="token id">#content</span></span><span class="token punctuation">{</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">50</span>px<span class="token punctuation">;</span>
+        <span class="token property">background-color</span><span class="token punctuation">:</span> cornflowerblue<span class="token punctuation">;</span>
+        <span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*不起作用*/</span>
+        <span class="token property">top</span><span class="token punctuation">:</span><span class="token number">50</span>px<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/*不起作用*/</span>
+        <span class="token property">position</span><span class="token punctuation">:</span> static<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>content<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<p><img src="https://s3.ax1x.com/2020/11/12/DS9gbV.jpg"><br>position的默认值为staitic，因此在<code>#content</code>中写与不写position属性，top与left等均不起作用，元素会以正常的normal flow形式呈现。</p>
+<h3 id="positon-fixed-固定定位"><a href="#positon-fixed-固定定位" class="headerlink" title="positon:fixed(固定定位)"></a>positon:fixed(固定定位)</h3><blockquote>
+<p>固定定位不为元素预留空间，而是通过指定元素相对于屏幕视口（viewport）的位置来指定元素位置。元素的位置在屏幕滚动时不会改变，该元素脱离了normal flow。<br>修改<code>#content</code>中position属性值以及top和right值。</p>
+</blockquote>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token id">#content</span></span><span class="token punctuation">{</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">50</span>px<span class="token punctuation">;</span>
+        <span class="token property">background-color</span><span class="token punctuation">:</span> cornflowerblue<span class="token punctuation">;</span>
+        <span class="token property">right</span><span class="token punctuation">:</span> <span class="token number">8</span>px<span class="token punctuation">;</span>
+        <span class="token property">top</span><span class="token punctuation">:</span><span class="token number">58</span>px<span class="token punctuation">;</span>
+        <span class="token property">position</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span></code></pre>
+<p><img src="https://s3.ax1x.com/2020/11/12/DSC0Z6.jpg"><br>可以看出蓝色块被固定在了距离页面右侧8px，距离页面顶部58px的位置，且页面滑动时，蓝色块的位置不会发生变化。</p>
+<h2 id="Flex布局"><a href="#Flex布局" class="headerlink" title="Flex布局"></a>Flex布局</h2><h3 id="未完待续············"><a href="#未完待续············" class="headerlink" title="未完待续············"></a>未完待续············</h3>
       </div>
       
         <div class="copyright">
