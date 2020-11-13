@@ -470,7 +470,33 @@
 <h3 id="Flex的项目属性"><a href="#Flex的项目属性" class="headerlink" title="Flex的项目属性"></a>Flex的项目属性</h3><blockquote>
 <p>Flex的项目属性有以下六个，这些属性直接设置在项目上：</p>
 </blockquote>
-
+<ul>
+<li>order //设置项目的排列顺序</li>
+<li>flex-grow  //设置项目的放大比例</li>
+<li>flex-shrink //设置项目的缩小比例</li>
+<li>flex-basis  //设置项目占据主轴的空间</li>
+<li>flex //flex-grow,flex-shrink和flex-basis的简写</li>
+<li>align-self //设置单个项目的对齐方式</li>
+</ul>
+<h4 id="order属性"><a href="#order属性" class="headerlink" title="order属性"></a>order属性</h4><blockquote>
+<p><code>order</code>属性定义项目的排列顺序。数值越小，排列越靠前，默认为<code>0</code>。对第四个div设置为<code>-1</code>,则这个div会排在第一位，因为其他div的<code>order</code>属性默认为<code>0</code>。</p>
+</blockquote>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span> div<span class="token pseudo-class">:nth-child(4)</span></span><span class="token punctuation">{</span>
+        <span class="token property">order</span><span class="token punctuation">:</span> -<span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span></code></pre>
+<p><img src="https://s3.ax1x.com/2020/11/13/D906OS.jpg"></p>
+<h4 id="flex-grow"><a href="#flex-grow" class="headerlink" title="flex-grow"></a>flex-grow</h4><blockquote>
+<p><code>flex-grow</code>属性定义项目的放大比例，默认为<code>0</code>，即如果存在剩余空间，也不放大。<br>设置所有项目的<code>flex-grow</code>的值均为1，如果存在剩余空间的话，那么它们将均分剩余的空间：</p>
+</blockquote>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span> div</span><span class="token punctuation">{</span>
+    <span class="token property">flex-grow</span><span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p><img src="https://s3.ax1x.com/2020/11/13/D900JI.jpg"><br>如给其中项目的<code>flex-grow</code>的值均为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。</p>
+<pre class=" language-css"><code class="language-css"> <span class="token selector"><span class="token class">.box1</span> div<span class="token pseudo-class">:nth-child(2)</span></span><span class="token punctuation">{</span>
+        <span class="token property">flex-grow</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span></code></pre>
+<p><img src="https://s3.ax1x.com/2020/11/13/D90TyT.jpg"></p>
+<h4 id="flex-shrink"><a href="#flex-shrink" class="headerlink" title="flex-shrink"></a>flex-shrink</h4>
       </div>
       
         <div class="copyright">
