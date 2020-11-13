@@ -10,7 +10,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>分类: 技术 | WyaBlog</title>
+  <title>Flex布局 | WyaBlog</title>
   
     
 <link rel="stylesheet" href="/js/aos/aos.css">
@@ -308,318 +308,401 @@
     <main class="main" style="margin-top: 60px;">
       
 
-<div style="width: 100%;height: 50vh;overflow: hidden;background-image: url('https://s1.ax1x.com/2020/11/10/Bq1L8O.jpg');background-size: cover; 
-background-position: center center;">
+
+<div class="post-detail-header" style="background: url(https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1370989892,359307953&amp;fm=26&amp;gp=0.jpg) no-repeat; background-size: cover; 
+  background-position: center center;">
+  
+    <span class="title">Flex布局</span>
+  
 </div>
-<div class="category">
-  <div class="category-name">
-    <div class="name" style="background-color: #F8F9F9;">技术 分类</div>
+<div class="row justify-center">
+  <div class="main-content">
+    <article class="post post-detail">
+      
+      
+      <div class="post-meta">
+        <i class="fa fa-clock-o" aria-hidden="true"></i>
+        <span class="post-time">2020-11-13</span>
+      </div>
+      
+      <div class="post-tags-categories">
+        
+        <div class="tags">
+          <i class="iconfont icontag"></i>
+          
+            <a href="/tags/flex/" class="">
+              flex
+            </a>
+          
+        </div>
+        
+        
+        <div class="categories">
+          <i class="iconfont iconbookmark1"></i>
+          
+            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="">
+              技术
+            </a>
+          
+        </div>
+        
+      </div>
+      <div class="post-content">
+        <p>&emsp;&emsp;Flex（Flexible Box）意为弹性布局，具有灵活方便的特点，且任何一个容器都可以指定为Flex布局。我参考了阮一峰老师的<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" target="_blank" rel="noopener">Flex布局教程：语法篇</a>,对Flex的理解与实践记录。</p>
+<hr>
+<h2 id="Flex布局"><a href="#Flex布局" class="headerlink" title="Flex布局"></a>Flex布局</h2><h3 id="认识Flex"><a href="#认识Flex" class="headerlink" title="认识Flex"></a>认识Flex</h3><blockquote>
+<p>Flex可以指定任何一个容器为Flex布局，能够为盒模型提供最大的灵活性。</p>
+</blockquote>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span></span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span>flex<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>即使是行内元素，也可以使用Flex布局：</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span></span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span>inline-flex<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p>考虑对浏览器的兼容性，对于webkit内核的浏览器，需要先加上<code>-webkit</code>前缀：</p>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span></span><span class="token punctuation">{</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> -webkit-flex<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/* Safari */</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p><strong>当对元素使用Flex布局之后，其子元素的浮动属性<code>float</code>、<code>clear</code>以及垂直对齐<code>vertical-align</code>属性将会生效。</strong></p>
+<h3 id="Flex的基本概念"><a href="#Flex的基本概念" class="headerlink" title="Flex的基本概念"></a>Flex的基本概念</h3><blockquote>
+<p>元素采用Flex布局之后被称为Flex容器（flex container），简称“容器”。他的所有子成员自动变为容器成员，成为Flex项目（flex item），简称“项目”。下面是一个容器和项目的简单示意图，它能帮助我们认识flex布局中的一些基本概念。</p>
+</blockquote>
+<p><img src="https://s3.ax1x.com/2020/11/13/DpEY38.jpg"></p>
+<p>容器默认有两个轴，<code>主轴（main axis</code>）和<code>交叉轴（cross）</code>。其中，默认的主轴为水平方向，交叉轴为垂直于主轴的竖直方向。主轴的开始位置（与边框的交叉点）叫做<code>main start</code>，结束位置叫做<code>main end</code>；交叉轴的开始位置叫做<code>cross start</code>，结束位置叫做<code>cross end</code>。</p>
+<p>其中每个项目默认沿主轴排列。单个项目占据的主轴空间叫做<code>main size</code>，占据的交叉轴空间叫做<code>cross size</code>。</p>
+<h3 id="Flex的容器属性"><a href="#Flex的容器属性" class="headerlink" title="Flex的容器属性"></a>Flex的容器属性</h3><blockquote>
+<p>Flex的容器属性有以下六个，这些属性直接设置在容器上：</p>
+</blockquote>
+<ul>
+<li>flex-direction //设置主轴方向</li>
+<li>flex-wrap    //是否换行</li>
+<li>flex-flow   //flex-direction和flex-wrap的合并简写</li>
+<li>justify-content  //项目在主轴上的对齐方式</li>
+<li>align-item   //项目在交叉轴的对齐方式</li>
+<li>align-content  //多轴线对齐方式</li>
+</ul>
+<h4 id="flex-direction属性"><a href="#flex-direction属性" class="headerlink" title="flex-direction属性"></a>flex-direction属性</h4><blockquote>
+<p><code>flex-direction</code>可以设置4个值，分别是：</p>
+</blockquote>
+<ul>
+<li>row（默认值）：主轴为水平方向，起点在左端。</li>
+<li>row-reverse：主轴为水平方向，起点在右端。</li>
+<li>column：主轴为垂直方向，起点在上沿。</li>
+<li>column-reverse：主轴为垂直方向，起点在下沿。<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
+<span class="token property">flex-direction</span><span class="token punctuation">:</span> row | row-reverse | column | column-reverse<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<img src="https://s3.ax1x.com/2020/11/13/DpuTPA.jpg"></li>
+</ul>
+<h4 id="flex-wrap属性"><a href="#flex-wrap属性" class="headerlink" title="flex-wrap属性"></a>flex-wrap属性</h4><blockquote>
+<p>在默认的情况下，项目会排在一条轴线上，当一条轴线排不下所有项目时，通过<code>flex-wrap</code>属性可以设置如何换行。它可以设置三个值，分别为：</p>
+</blockquote>
+<ul>
+<li>nowrap（默认值）：不换行</li>
+<li>wrap：换行，第一行在上方</li>
+<li>wrap-reverse：换行，第一行在下方</li>
+</ul>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span></span><span class="token punctuation">{</span>
+  <span class="token property">flex-wrap</span><span class="token punctuation">:</span> nowrap | wrap | wrap-reverse<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<h5 id="flex-wrap-nowrap"><a href="#flex-wrap-nowrap" class="headerlink" title="flex-wrap:nowrap;"></a>flex-wrap:nowrap;</h5><blockquote>
+<p>默认为不换行：</p>
+</blockquote>
+<p><img src="https://s3.ax1x.com/2020/11/13/DpleIg.jpg"></p>
+<h5 id="flex-wrap-wrap"><a href="#flex-wrap-wrap" class="headerlink" title="flex-wrap:wrap;"></a>flex-wrap:wrap;</h5><blockquote>
+<p>换行，第一行在上方：</p>
+</blockquote>
+<p><img src="https://s3.ax1x.com/2020/11/13/DplUJJ.jpg"></p>
+<h5 id="flex-weap-wrap-reverse"><a href="#flex-weap-wrap-reverse" class="headerlink" title="flex-weap:wrap-reverse;"></a>flex-weap:wrap-reverse;</h5><blockquote>
+<p>换行，第一行在下方:</p>
+</blockquote>
+<p><img src="https://s3.ax1x.com/2020/11/13/DplhQI.jpg"></p>
+<h4 id="flex-flow属性"><a href="#flex-flow属性" class="headerlink" title="flex-flow属性"></a>flex-flow属性</h4><blockquote>
+<p><code>flex-flow</code>属性是<code>flex-direction</code>属性和<code>flex-wrap</code>属性的简写形式，默认值为<code>row nowrap</code>。</p>
+</blockquote>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
+  <span class="token property">flex-flow</span><span class="token punctuation">:</span> &lt;flex-direction> || &lt;flex-wrap><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h4 id="justify-content属性"><a href="#justify-content属性" class="headerlink" title="justify-content属性"></a>justify-content属性</h4><blockquote>
+<p><code>justify-content</code>属性可以设置项目在主轴上的对齐方式，包括以下六种（这里默认主轴为水平从左到右的方向）：</p>
+</blockquote>
+<ul>
+<li>flex-start（默认值）：左对齐</li>
+<li>flex-end：右对齐</li>
+<li>center： 居中</li>
+<li>space-between：两端对齐，项目之间的间隔都相等。</li>
+<li>space-around：每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</li>
+<li>space-evenly：每个项目之间及两侧间隔均相等。//这个在阮一峰老师的原文中没有，兼容性比较差</li>
+</ul>
+<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> flex-start | flex-end | center | space-between | space-around<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<p><img src="https://s3.ax1x.com/2020/11/13/DpUPzD.jpg"></p>
+<h4 id="align-item属性"><a href="#align-item属性" class="headerlink" title="align-item属性"></a>align-item属性</h4><blockquote>
+<p><code>align-item</code>属性可以设置项目在交叉轴上的对齐方式，主要包括以下五种（这里默认主轴为水平从左到右的方向，交叉轴为垂直的从上到下的方向，且justify-content值为space-around）：</p>
+</blockquote>
+<ul>
+<li>flex-start：交叉轴的起点对齐。</li>
+<li>flex-end：交叉轴的终点对齐。</li>
+<li>center：交叉轴的中点对齐。</li>
+<li>baseline: 项目的第一行文字的基线对齐。</li>
+<li>stretch（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。<br><img src="https://s3.ax1x.com/2020/11/13/Dp0tuF.jpg"></li>
+</ul>
+<h4 id="align-content属性"><a href="#align-content属性" class="headerlink" title="align-content属性"></a>align-content属性</h4><blockquote>
+<p><code>align-content</code>属性可以设置多跟轴线的对齐方式，如果项目只有一根轴线，该属性不起作用。该属性可以取六个值：</p>
+</blockquote>
+<ul>
+<li>flex-start：与交叉轴的起点对齐。</li>
+<li>flex-end：与交叉轴的终点对齐。</li>
+<li>center：与交叉轴的中点对齐。</li>
+<li>space-between：与交叉轴两端对齐，轴线之间的间隔平均分布。</li>
+<li>space-around：每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</li>
+<li>stretch（默认值）：轴线占满整个交叉轴。<pre class=" language-css"><code class="language-css"><span class="token selector"><span class="token class">.box</span> </span><span class="token punctuation">{</span>
+<span class="token property">align-content</span><span class="token punctuation">:</span> flex-start | flex-end | center | space-between | space-around | stretch<span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+<img src="https://s3.ax1x.com/2020/11/13/Dprz8I.jpg"></li>
+</ul>
+<h3 id="Flex的项目属性"><a href="#Flex的项目属性" class="headerlink" title="Flex的项目属性"></a>Flex的项目属性</h3>
+      </div>
+      
+        <div class="copyright">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+    <strong>作者:  </strong>WY</a>
+    </li>
+    <li class="post-copyright-link">
+    <strong>文章链接:  </strong>
+    <a href="/2020/11/13/flex/" target="_blank" title="Flex布局">https://WJWYA.github.io/2020/11/13/flex/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明:   </strong>
+      本网站所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+      许可协议。转载请注明出处!
+    </li>
+  </ul>
+<div>
+      
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      <div class="post-nav">
+
+
+
+  <div class="post-nav-next post-nav-item">
+    <a href="/2020/11/12/position-flex/">
+      <span>
+        下一篇:    position定位用法复习及Flex布局学习 
+      </span>
+    </a>
   </div>
-  <section class="posts">
-    
-    <article class="post" data-aos="fade-up"
-      style="flex-direction: row-reverse;">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2020-11-13</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2020/11/13/flex/">Flex布局</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flex/" rel="tag">flex</a></li></ul>
 
-            </div>
-            <div class="post-categories">
-              
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
 </div>
 
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <a href="/2020/11/13/flex/" style="background: url('https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1370989892,359307953&amp;fm=26&amp;gp=0.jpg');background-size: cover; 
-              background-position: center center;">
-            </a>
-          </div>
-          <div class="post-content">
-            &emsp;&emsp;Flex（Flexible Box）意为弹性布局，具有灵活方便的特点，且任何一个容器都可以指定为Flex布局。我参考了阮一峰老师的Flex布局教程：语法篇,对Flex的理解与实践记录。
-
-Flex布局认识Flex
-F
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2020/11/13/flex/">
-            <i class="iconfont iconmore" style="float: right;" title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        <a href="/2020/11/13/flex/" style="background: url('https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1370989892,359307953&amp;fm=26&amp;gp=0.jpg');background-size: cover; 
-          background-position: center center;">
-        </a>
-      </div>
-    </article>
     
-    <article class="post" data-aos="fade-up"
-      style="">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2020-11-12</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2020/11/12/position-flex/">position定位用法复习及Flex布局学习</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/flex%E5%B8%83%E5%B1%80/" rel="tag">flex布局</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/positiond%E5%AE%9A%E4%BD%8D/" rel="tag">positiond定位</a></li></ul>
+    
 
-            </div>
-            <div class="post-categories">
-              
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+    <!-- 打赏 -->
+    
+      <div id="appDonate" class="post-donate">
+  <div id="donate_board" class="donate_bar center" ref="donate">
+    <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏" @click="showDialogDrawer()"></a>
+  </div>
+  <transition name="fade">
+    <div 
+      class="donate-box-mask"
+      v-cloak 
+      v-if="visible"
+      @click="cancelDialogDrawer()"
+    >
+    </div>
+  </transition>
+  <transition name="bounce">
+    <div class="donate-box" v-cloak v-if="visible">
+      <div class="donate-box_close">
+        <i class="fa fa-times" aria-hidden="true" @click="cancelDialogDrawer"></i>
+      </div>
+      <div class="donate-box_title">
+        <h4>
+          你的赏识是我前进的动力
+        </h4>
+      </div>
+      <div class="donate-box_tab">
+        <div class="Alipay" :class="{'active': tabActive === 'Alipay'}" @click="changeTabActive('Alipay')">
+          支付宝
+        </div>
+        <div class="WeChatpay" :class="{'active': tabActive === 'WeChatpay'}" @click="changeTabActive('WeChatpay')">
+          微信
+        </div>
+      </div>
+      <div class="donate-box_img">
+        <div class="AlipayImg" v-if="tabActive === 'Alipay'">
+          <img src="/medias/zfb.png" alt="支付宝打赏" />
+        </div> 
+        <div class="WeChatpayImg" v-if="tabActive === 'WeChatpay'">
+          <img src="/medias/wx.png" alt="微信打赏" />
+        </div>
+      </div>
+    </div>
+  </transition>
 </div>
 
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <a href="/2020/11/12/position-flex/" style="background: url('https://s3.ax1x.com/2020/11/12/BzrUuF.png');background-size: cover; 
-              background-position: center center;">
-            </a>
-          </div>
-          <div class="post-content">
-            &emsp;&emsp;我之前一直对position属性的relative值（相对定位）和absolute值（绝对定位）用法比较模糊，一直是用什么查什么，没有去深刻的理解。今天对position属性和Flex布局进行了系统全面学习和理解。
-
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2020/11/12/position-flex/">
-            <i class="iconfont iconmore" style="" title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        <a href="/2020/11/12/position-flex/" style="background: url('https://s3.ax1x.com/2020/11/12/BzrUuF.png');background-size: cover; 
-          background-position: center center;">
-        </a>
-      </div>
-    </article>
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDonate',
+    data: {
+      visible: false,
+      tabActive: 'Alipay',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        // function getScroll() {
+        //   return {
+        //     left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0,
+        //     top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+        //   };
+        // }
+        this.top = $(document).scrollTop() // or getScroll().top
+        body.style.cssText = 'width: 100%; height: 100%; position: fixed; top: -' + this.top + 'px; left: 0; overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+      changeTabActive(name) {
+        this.tabActive = name;
+      }
+    },
+    created() {}
+  })
+</script>
     
-    <article class="post" data-aos="fade-up"
-      style="flex-direction: row-reverse;">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2020-11-10</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2020/11/10/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/">音乐播放器</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/axios/" rel="tag">axios</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/music/" rel="tag">music</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/" rel="tag">vue</a></li></ul>
 
-            </div>
-            <div class="post-categories">
-              
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
-</div>
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <a href="/2020/11/10/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/" style="background: url('https://s1.ax1x.com/2020/11/10/BL6YAP.jpg');background-size: cover; 
-              background-position: center center;">
-            </a>
-          </div>
-          <div class="post-content">
-            &emsp;&emsp;王一昂的音乐播放器 是基于Vue和axios开发一款在线音乐播放软件，该播放器使用网易云API，歌曲全面，具有播放歌曲、查看评论以及播放mv等功能。
-
-音乐播放器界面展示初始化界面 
-
-该播放器界面主要有search
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2020/11/10/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/">
-            <i class="iconfont iconmore" style="float: right;" title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        <a href="/2020/11/10/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/" style="background: url('https://s1.ax1x.com/2020/11/10/BL6YAP.jpg');background-size: cover; 
-          background-position: center center;">
-        </a>
-      </div>
-    </article>
+    <!-- 分享 -->
     
-    <article class="post" data-aos="fade-up"
-      style="">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2020-11-10</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2020/11/10/markdown/">Markdown</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li></ul>
+      <!-- https://github.com/overtrue/share.js -->
 
-            </div>
-            <div class="post-categories">
-              
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
-</div>
+<div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
 
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <a href="/2020/11/10/markdown/" style="background: url('https://s1.ax1x.com/2020/11/10/BLe8Xt.jpg');background-size: cover; 
-              background-position: center center;">
-            </a>
-          </div>
-          <div class="post-content">
-            &emsp;&emsp;Markdown是一种轻量级标记语言，创始人为约翰·格鲁伯（英语：John Gruber）。 它允许人们使用易读易写的纯文本格式编写文档，然后转换成有效的XHTML（或者HTML）文档。这种语言吸收了很多在电子邮件中
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2020/11/10/markdown/">
-            <i class="iconfont iconmore" style="" title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        <a href="/2020/11/10/markdown/" style="background: url('https://s1.ax1x.com/2020/11/10/BLe8Xt.jpg');background-size: cover; 
-          background-position: center center;">
-        </a>
-      </div>
-    </article>
+
+
+<script src="/js/shareJs/social-share.min.js"></script>
+
+</script>
+
+<style>
+  .social-share {
+    margin: 20px 0;
+  }
+</style>
+
+
     
-    <article class="post" data-aos="fade-up"
-      style="flex-direction: row-reverse;">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2020-11-08</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2020/11/08/hexo/">Hello Hexo</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
 
-            </div>
-            <div class="post-categories">
-              
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
-</div>
+    <!-- 评论 -->
+      
+        
+          <section id="comments" style="padding: 1em; background: rgba(255, 255, 255, 0.5); margin: 15px auto;" data-aos="fade-up">
+	<div id="vcomment" class="comment"></div>
+	<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js"></script>
+	<script>
+		new Valine({
+			el: '#vcomment',
+			notify: false,
+			verify: false,
+			app_id: "nIPEGVTK4mU5ymN9XbUhdSn8-gzGzoHsz",
+			app_key: "ANh6T3HhBptKsuO91Lf5hS2w",
+			placeholder: "客官，说点什么吧",
+			avatar: ""
+		});
+	</script>
+</section>
+<style>
+#vcomment textarea {
+	background: url('/medias/comment_bg7.png') 100% 100% no-repeat;
+}
+</style>
 
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <a href="/2020/11/08/hexo/" style="background: url('https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=296953856,1167527872&amp;fm=26&amp;gp=0.jpg');background-size: cover; 
-              background-position: center center;">
-            </a>
-          </div>
-          <div class="post-content">
-            &emsp;&emsp;Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems wh
-          </div>
+        
+      
+  </div>
+
+  
+    <div class="toc-aside">
+      <div class="toc-main">
+        <div class="toc-aside-title">
+          <i class="fa fa-list-ul" aria-hidden="true"></i><span>目录</span>
         </div>
-        <div class="post-more">
-          <a href="/2020/11/08/hexo/">
-            <i class="iconfont iconmore" style="float: right;" title="阅读更多"></i>
-          </a>
+        <div class="toc-content">
+          <link href="/js/tocbot/tocbot.css" rel="stylesheet">
+<script src="/js/tocbot/tocbot.min.js"></script>
+<div class="toc"></div>
+
+<script>
+  if ($('.toc').length > 0) {
+    var headerEl = 'h2, h3, h4',  //headers 
+      content = '.post-detail',//文章容器
+      idArr = {};  //标题数组以确定是否增加索引id
+      //add #id
+
+    $(content).children(headerEl).each(function () {
+      //去除空格以及多余标点
+      var headerId = $(this).text().replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?|\：|\，|\。]/g, '');
+
+      headerId = headerId.toLowerCase();
+      if (idArr[headerId]) {
+        //id已经存在
+        $(this).attr('id', headerId + '-' + idArr[headerId]);
+        idArr[headerId]++;
+      }
+      else {
+        //id未存在
+        idArr[headerId] = 1;
+        $(this).attr('id', headerId);
+      }
+    });
+
+    tocbot.init({
+      // Where to render the table of contents.
+      tocSelector: '.toc',
+      // Where to grab the headings to build the table of contents.
+      contentSelector: content,
+      // Which headings to grab inside of the contentSelector element.
+      headingSelector: headerEl,
+      scrollSmooth: true,
+      scrollSmoothOffset: -80,
+      headingsOffset: 130,
+      positionFixedSelector: '.toc-main',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  }
+
+</script>
+
+<style>
+.is-position-fixed {
+  position:fixed !important;
+  top: 64px;
+}
+
+</style>
         </div>
       </div>
-      <div class="post-img">
-        <a href="/2020/11/08/hexo/" style="background: url('https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=296953856,1167527872&amp;fm=26&amp;gp=0.jpg');background-size: cover; 
-          background-position: center center;">
-        </a>
-      </div>
-    </article>
-    
-    <article class="post" data-aos="fade-up"
-      style="">
-      <div class="post-main">
-        <div class="post-info">
-          <div class="post-time">
-            <i class="fa fa-clock-o" aria-hidden="true"></i>
-            <span class="post-time">2020-11-07</span>
-          </div>
-          <div class="post-title">
-            <a class="post-title-link" href="/2020/11/07/vue/">Hello Vue</a>
-          </div>
-          <div class="post-meta">
-            <div class="post-tags">
-              
-    <i class="iconfont icontag"></i>
-    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/" rel="tag">vue</a></li></ul>
-
-            </div>
-            <div class="post-categories">
-              
-<div class="article-category">
-  <i class="iconfont iconbookmark1"></i>
-  <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
-</div>
-
-            </div>
-          </div>
-          <div class="post-img-mobile">
-            <a href="/2020/11/07/vue/" style="background: url('https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1604983722829&amp;di=55bef4564b148c19dae335851ee6ea5a&amp;imgtype=0&amp;src=http%3A%2F%2Fpic4.zhimg.com%2Fv2-a3a350493a1ad6d46a1800ee2aad3fcf_1200x500.jpg');background-size: cover; 
-              background-position: center center;">
-            </a>
-          </div>
-          <div class="post-content">
-            &emsp;&emsp;Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式JavaScript框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，方便与第三方库或既
-          </div>
-        </div>
-        <div class="post-more">
-          <a href="/2020/11/07/vue/">
-            <i class="iconfont iconmore" style="" title="阅读更多"></i>
-          </a>
-        </div>
-      </div>
-      <div class="post-img">
-        <a href="/2020/11/07/vue/" style="background: url('https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1604983722829&amp;di=55bef4564b148c19dae335851ee6ea5a&amp;imgtype=0&amp;src=http%3A%2F%2Fpic4.zhimg.com%2Fv2-a3a350493a1ad6d46a1800ee2aad3fcf_1200x500.jpg');background-size: cover; 
-          background-position: center center;">
-        </a>
-      </div>
-    </article>
-    
-  </section>
+    </div>
+  
 </div>
 
     </main>
