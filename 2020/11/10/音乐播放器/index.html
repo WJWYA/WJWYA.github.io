@@ -396,505 +396,511 @@
 <p>index.html </p>
 </blockquote>
 </blockquote>
-<h4 id="index-html代码"><a href="#index-html代码" class="headerlink" title="index.html代码"></a>index.html代码</h4><pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width, initial-scale<span class="token punctuation">=</span>1.0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>王一昂的音乐播放器<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>css/main.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>wrap<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>play_wrap<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>player<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>search_bar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>wy<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>一起网抑云<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span> 
-<span class="token comment" spellcheck="true">&lt;!-- 搜索歌曲 --></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>输入要搜索的Music<span class="token punctuation">"</span></span> <span class="token attr-name">autocomplete</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>off<span class="token punctuation">"</span></span> 
-<span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>query<span class="token punctuation">'</span></span> <span class="token attr-name">@keyup.enter</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchMusic<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>center_con<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
-<span class="token comment" spellcheck="true">&lt;!--搜索歌曲列表--></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>song_wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>song_list<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item in musicList<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>javascript:;<span class="token punctuation">"</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>playMusic(item.id)<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">></span></span>{{item.name}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">></span></span>{{item.artists[0].name}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item.mvid!<span class="token punctuation">=</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>playMV(item.mvid)<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span> 
-<span class="token comment" spellcheck="true">&lt;!--歌曲信息容器--></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>player_con<span class="token punctuation">"</span></span> <span class="token attr-name">:class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{playing:isPlaying}<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://i.loli.net/2020/03/23/gZHko2WlpJNcGPv.png<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>play_bar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://i.loli.net/2020/03/23/hQPuH4gNRx7XayI.png<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>disc autoRotate<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">:src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>musicCover<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>cover autoRotate<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>musicOn<span class="token punctuation">"</span></span> <span class="token attr-name">v-show</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>isPlaying<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>正在播放<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">></span></span>{{songPlaying}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">></span></span>{{songArtist}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span> 
-<span class="token comment" spellcheck="true">&lt;!--评论容器--></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>comment_wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h5</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>热门留言<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h5</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>comment_list<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dl</span> <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item in hotComments<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">:src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item.user.avatarUrl<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dt</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>{{item.user.nickname}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>detail<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>{{item.content}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dl</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>audio_con<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>audio</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>music1<span class="token punctuation">"</span></span> <span class="token attr-name">refs</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>audio<span class="token punctuation">"</span></span> <span class="token attr-name">:src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>musicUrl<span class="token punctuation">"</span></span> <span class="token attr-name">@play</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>play<span class="token punctuation">"</span></span> <span class="token attr-name">@pause</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>pause<span class="token punctuation">"</span></span> 
-<span class="token attr-name">controls</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>controls<span class="token punctuation">"</span></span> <span class="token attr-name">autoplay</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>autoplay<span class="token punctuation">"</span></span> <span class="token attr-name">loop</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>loop<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>myaudio<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>audio</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>video_con<span class="token punctuation">"</span></span> <span class="token attr-name">v-show</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>isShow<span class="token punctuation">"</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span> <span class="token attr-name">:src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>mvUrl<span class="token punctuation">"</span></span> <span class="token attr-name">controls</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>controls<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>video</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>mask<span class="token punctuation">"</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>hide<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span> 
-<span class="token comment" spellcheck="true">&lt;!-- 开发环境版本，包含了有帮助的命令行警告 --></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/vue/dist/vue.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span> 
-<span class="token comment" spellcheck="true">&lt;!--官网提供的axios在线地址--></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://unpkg.com/axios/dist/axios.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>js/main.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span> 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span> </code></pre>
-<h4 id="main-js代码"><a href="#main-js代码" class="headerlink" title="main.js代码"></a>main.js代码</h4><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">/* 
-请求地址：https://autumnfish.cn/search 
-请求方法：get 
-请求参数：keywords 查询的关键字 
-形影内容：歌曲搜索结果 
-*/</span> 
-<span class="token comment" spellcheck="true">/* 
-歌曲url获取接口 
-请求地址：https://autumnfish.cn/song/url 
-请求方法：get 
-请求参数：id（歌曲id） 
-响应内容：歌曲的url地址 
-*/</span> 
-<span class="token comment" spellcheck="true">/* 
-歌曲详情获取接口 
-请求地址：https://autumnfish.cn/song/detail 
-请求方法：get 
-请求参数：ids（歌曲id） 
-响应内容：歌曲详情，包含封面信息 
-*/</span> 
-<span class="token comment" spellcheck="true">/* 
-热门评论获取 
-请求地址：https://autumnfish.cn/comment/hot?type=0 
-请求方法：get 
-请求参数：id（歌曲id,type固定为0） 
-响应内容：歌曲热门评论 
-*/</span> 
-<span class="token comment" spellcheck="true">/* 
-mv地址获取 
-请求地址：https://autumnfish.cn/mv/url 
-请求方法：get 
-请求参数：id（mvid,为0说明没有mv） 
-响应内容：mv的地址 
-*/</span> 
-<span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span> 
-el<span class="token punctuation">:</span> <span class="token string">"#player"</span><span class="token punctuation">,</span> 
-data<span class="token punctuation">:</span> <span class="token punctuation">{</span> 
-<span class="token comment" spellcheck="true">//查询关键字 </span>
-query<span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span> 
-<span class="token comment" spellcheck="true">// 歌曲播放 </span>
-musicList<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> 
-<span class="token comment" spellcheck="true">//歌曲地址 </span>
-musicUrl<span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span> 
-<span class="token comment" spellcheck="true">//歌曲封面 </span>
-musicCover<span class="token punctuation">:</span> <span class="token string">"https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1605014906629&amp;di=2f802dcaa6465875de87930bc0c2f22c&amp;imgtype=0&amp;src=http%3A%2F%2Fwww.aqslzs.com%2Fuploads%2Fallimg%2F20200222%2F1582342132632_0.jpg"</span><span class="token punctuation">,</span> 
-<span class="token comment" spellcheck="true">//歌曲评论 </span>
-hotComments<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> 
-<span class="token comment" spellcheck="true">//动画播放状态 </span>
-isPlaying<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> 
-<span class="token comment" spellcheck="true">//遮罩层的显示状态 </span>
-isShow<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> 
-<span class="token comment" spellcheck="true">//mv地址 </span>
-mvUrl<span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span> 
-<span class="token comment" spellcheck="true">//正在播放的歌曲 </span>
-songPlaying<span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span> 
-<span class="token comment" spellcheck="true">//正在播放的歌曲的演唱者 </span>
-songArtist<span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span> 
-<span class="token punctuation">}</span><span class="token punctuation">,</span> 
-methods<span class="token punctuation">:</span> <span class="token punctuation">{</span> 
-<span class="token comment" spellcheck="true">//歌曲搜索 </span>
-searchMusic<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
-<span class="token keyword">var</span> that <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span> 
-axios<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">"https://autumnfish.cn/search?keywords="</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>query<span class="token punctuation">)</span> 
-<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
-<span class="token comment" spellcheck="true">//console.log(response); </span>
-<span class="token comment" spellcheck="true">// console.log(response.data.result.songs); </span>
-that<span class="token punctuation">.</span>musicList <span class="token operator">=</span> response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>result<span class="token punctuation">.</span>songs<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
-console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span> 
-<span class="token punctuation">}</span><span class="token punctuation">)</span> 
-<span class="token punctuation">}</span><span class="token punctuation">,</span> 
-<span class="token comment" spellcheck="true">//歌曲播放 </span>
-playMusic<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>musicId<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
-<span class="token comment" spellcheck="true">//console.log(musicId); </span>
-<span class="token keyword">var</span> that <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span> 
-axios<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">"https://autumnfish.cn/song/url?id="</span> <span class="token operator">+</span> musicId<span class="token punctuation">)</span> 
-<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
-<span class="token comment" spellcheck="true">// console.log(response); </span>
-<span class="token comment" spellcheck="true">// console.log(response.data.data[0].url); </span>
-that<span class="token punctuation">.</span>musicUrl <span class="token operator">=</span> response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>data<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>url<span class="token punctuation">;</span> 
-<span class="token keyword">if</span><span class="token punctuation">(</span>that<span class="token punctuation">.</span>musicUrl<span class="token operator">!=</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span> 
-<span class="token comment" spellcheck="true">//歌曲详情获取 </span>
-axios<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">"https://autumnfish.cn/song/detail?ids="</span> <span class="token operator">+</span> musicId<span class="token punctuation">)</span> 
-<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
-<span class="token comment" spellcheck="true">// console.log(response); </span>
-<span class="token comment" spellcheck="true">//console.log(response.data.songs[0].al.picUrl); </span>
-that<span class="token punctuation">.</span>musicCover <span class="token operator">=</span> response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>songs<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>al<span class="token punctuation">.</span>picUrl<span class="token punctuation">;</span> 
-that<span class="token punctuation">.</span>songPlaying <span class="token operator">=</span> response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>songs<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">;</span> 
-that<span class="token punctuation">.</span>songArtist <span class="token operator">=</span> response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>songs<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>ar<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> 
-<span class="token comment" spellcheck="true">//歌曲评论获取 </span>
-axios<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">"https://autumnfish.cn/comment/hot?type=0&amp;id="</span> <span class="token operator">+</span> musicId<span class="token punctuation">)</span> 
-<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
-<span class="token comment" spellcheck="true">//console.log(response.data.hotComments); </span>
-that<span class="token punctuation">.</span>hotComments <span class="token operator">=</span> response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>hotComments<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> 
-<span class="token punctuation">}</span> 
-<span class="token keyword">else</span><span class="token punctuation">{</span> 
-<span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"这首歌的资源跑路了！！！"</span><span class="token punctuation">)</span> 
-<span class="token punctuation">}</span> 
-<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> 
-<span class="token punctuation">}</span><span class="token punctuation">,</span> 
-<span class="token comment" spellcheck="true">//歌曲播放 </span>
-play<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
-<span class="token comment" spellcheck="true">//console.log("play"); </span>
-<span class="token keyword">this</span><span class="token punctuation">.</span>isPlaying <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span><span class="token punctuation">,</span> 
-<span class="token comment" spellcheck="true">//歌曲暂停 </span>
-pause<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
-<span class="token comment" spellcheck="true">//console.log("pause"); </span>
-<span class="token keyword">this</span><span class="token punctuation">.</span>isPlaying <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span><span class="token punctuation">,</span> 
-<span class="token comment" spellcheck="true">//播放mv </span>
-playMV<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>mvid<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
-<span class="token keyword">var</span> a <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"music1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-a<span class="token punctuation">.</span><span class="token function">pause</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-<span class="token keyword">var</span> that <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span> 
-axios<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">"https://autumnfish.cn/mv/url?id="</span> <span class="token operator">+</span> mvid<span class="token punctuation">)</span> 
-<span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
-<span class="token comment" spellcheck="true">// console.log(response); </span>
-<span class="token comment" spellcheck="true">// console.log(response.data.data.url); </span>
-that<span class="token punctuation">.</span>isShow <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span> 
-<span class="token comment" spellcheck="true">// that.musicUrl = ""; </span>
-<span class="token comment" spellcheck="true">// that.isPlaying = false; </span>
-<span class="token comment" spellcheck="true">// that.$refs.audio.pause(); </span>
-that<span class="token punctuation">.</span>mvUrl <span class="token operator">=</span> response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>data<span class="token punctuation">.</span>url<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> 
-<span class="token punctuation">}</span><span class="token punctuation">,</span> 
-<span class="token comment" spellcheck="true">//隐藏遮罩层 </span>
-hide<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
-<span class="token keyword">this</span><span class="token punctuation">.</span>isShow <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span> 
-<span class="token keyword">this</span><span class="token punctuation">.</span>mvUrl <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token punctuation">}</span> 
-<span class="token punctuation">}</span><span class="token punctuation">)</span> </code></pre>
-<h4 id="main-css代码"><a href="#main-css代码" class="headerlink" title="main.css代码"></a>main.css代码</h4><pre class=" language-css"><code class="language-css"><span class="token selector">body, 
-ul, 
-dl, 
-dd </span><span class="token punctuation">{</span> 
-<span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span>px<span class="token punctuation">;</span> 
-<span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">0</span>px<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector">body</span><span class="token punctuation">{</span> 
-<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#76b3d6</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.wrap</span> </span><span class="token punctuation">{</span> 
-<span class="token comment" spellcheck="true">/* position: fixed; */</span> 
-<span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span> 
-<span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span> 
-<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span> 
-<span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span> 
-<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#f3f3f3</span><span class="token punctuation">;</span> 
-<span class="token comment" spellcheck="true">/* background-size: 100% 100%; */</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.play_wrap</span> </span><span class="token punctuation">{</span> 
-<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">1000</span>px<span class="token punctuation">;</span> 
-<span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">544</span>px<span class="token punctuation">;</span> 
-<span class="token property">position</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span> 
-<span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">50%</span><span class="token punctuation">;</span> 
-<span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">50%</span><span class="token punctuation">;</span> 
-<span class="token property">margin-left</span><span class="token punctuation">:</span> -<span class="token number">500</span>px<span class="token punctuation">;</span> 
-<span class="token property">margin-top</span><span class="token punctuation">:</span> -<span class="token number">272</span>px<span class="token punctuation">;</span> 
-<span class="token comment" spellcheck="true">/* background-color: #f9f9f9; */</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.search_bar</span> </span><span class="token punctuation">{</span> 
-<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span> 
-<span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">60</span>px<span class="token punctuation">;</span> 
-<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#033345</span><span class="token punctuation">;</span> 
-<span class="token property">border-top-left-radius</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span> 
-<span class="token property">border-top-right-radius</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span> 
-<span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span> 
-<span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/* flex属性：交叉轴对齐方式*/</span> 
-<span class="token property">justify-content</span><span class="token punctuation">:</span> space-between<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/* flex属性：项目在主轴上的对齐方式*/</span> 
-<span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span> 
-<span class="token property">z-index</span><span class="token punctuation">:</span> <span class="token number">11</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.search_bar</span> img </span><span class="token punctuation">{</span> 
-<span class="token property">margin-left</span><span class="token punctuation">:</span> <span class="token number">23</span>px<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.search_bar</span> input </span><span class="token punctuation">{</span> 
-<span class="token property">margin-right</span><span class="token punctuation">:</span> <span class="token number">53</span>px<span class="token punctuation">;</span> 
-<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">296</span>px<span class="token punctuation">;</span> 
-<span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">34</span>px<span class="token punctuation">;</span> 
-<span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span> 
-<span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">0</span>px<span class="token punctuation">;</span> 
-<span class="token property">background</span><span class="token punctuation">:</span> <span class="token url">url("https://i.loli.net/2020/03/23/9FeKnVlohsY3krO.png")</span> <span class="token number">265</span>px center no-repeat 
-<span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">234</span>, <span class="token number">236</span>, <span class="token number">236</span>, <span class="token number">0.192</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-<span class="token property">text-indent</span><span class="token punctuation">:</span> <span class="token number">15</span>px<span class="token punctuation">;</span> 
-<span class="token property">outline</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> 
-<span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#f3f3f3</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.search_bar</span> input<span class="token pseudo-element">::-webkit-input-placeholder</span></span><span class="token punctuation">{</span> 
-<span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#f3f3f3</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.center_con</span> </span><span class="token punctuation">{</span> 
-<span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">435</span>px<span class="token punctuation">;</span> 
-<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">255</span>, <span class="token number">255</span>, <span class="token number">255</span>, <span class="token number">0.5</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-<span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span> 
-<span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.song_wrapper</span> </span><span class="token punctuation">{</span> 
-<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">320</span>px<span class="token punctuation">;</span> 
-<span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">435</span>px<span class="token punctuation">;</span> 
-<span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span> 
-<span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span> 
-<span class="token property">list-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> 
-<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span> 
-<span class="token property">background-color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span> 
-<span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">0</span>px<span class="token punctuation">;</span> 
-<span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">0</span>px<span class="token punctuation">;</span> 
-<span class="token property">z-index</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.song_list</span> </span><span class="token punctuation">{</span> 
-<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span> 
-<span class="token property">overflow-y</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span> 
-<span class="token property">overflow-x</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span> 
-<span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.song_list</span><span class="token pseudo-element">::-webkit-scrollbar</span> </span><span class="token punctuation">{</span> 
-<span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.song_list</span> li </span><span class="token punctuation">{</span> 
-<span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">13</span>px<span class="token punctuation">;</span> 
-<span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#033345</span><span class="token punctuation">;</span> 
-<span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">40</span>px<span class="token punctuation">;</span> 
-<span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span> 
-<span class="token property">flex-wrap</span><span class="token punctuation">:</span> wrap<span class="token punctuation">;</span> 
-<span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span> 
-<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">300</span>px<span class="token punctuation">;</span> 
-<span class="token property">padding-left</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.song_list</span> li<span class="token pseudo-class">:nth-child(odd)</span> </span><span class="token punctuation">{</span> 
-<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">118</span>,<span class="token number">179</span>,<span class="token number">214</span>, <span class="token number">0.3</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.song_list</span> li a </span><span class="token punctuation">{</span> 
-<span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span> 
-<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">17</span>px<span class="token punctuation">;</span> 
-<span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">17</span>px<span class="token punctuation">;</span> 
-<span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url">url("https://s1.ax1x.com/2020/11/09/BHiilD.png")</span><span class="token punctuation">;</span> 
-<span class="token property">background-size</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span> 
-<span class="token property">margin-right</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span> 
-<span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.song_list</span> li b </span><span class="token punctuation">{</span> 
-<span class="token property">font-weight</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span> 
-<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span> 
-<span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span> 
-<span class="token property">text-overflow</span><span class="token punctuation">:</span> ellipsis<span class="token punctuation">;</span> 
-<span class="token property">padding-left</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span> 
-<span class="token property">white-space</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.song_list</span> li span </span><span class="token punctuation">{</span> 
-<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">23</span>px<span class="token punctuation">;</span> 
-<span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">17</span>px<span class="token punctuation">;</span> 
-<span class="token property">margin-right</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.song_list</span> li span i </span><span class="token punctuation">{</span> 
-<span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span> 
-<span class="token comment" spellcheck="true">/* background-color: #033345; */</span> 
-<span class="token property">background-size</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span> 
-<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">17</span>px<span class="token punctuation">;</span> 
-<span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">17</span>px<span class="token punctuation">;</span> 
-<span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span> 
-<span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url">url("https://s1.ax1x.com/2020/11/09/BHiw1U.png")</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.player_con</span> </span><span class="token punctuation">{</span> 
-<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">340</span>px<span class="token punctuation">;</span> 
-<span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">435</span>px<span class="token punctuation">;</span> 
-<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span> 
-<span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">320</span>px<span class="token punctuation">;</span> 
-<span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">0</span>px<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.disc</span> </span><span class="token punctuation">{</span> 
-<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span> 
-<span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">45</span>px<span class="token punctuation">;</span> 
-<span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">60</span>px<span class="token punctuation">;</span> 
-<span class="token property">z-index</span><span class="token punctuation">:</span> <span class="token number">9</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.cover</span> </span><span class="token punctuation">{</span> 
-<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span> 
-<span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">98</span>px<span class="token punctuation">;</span> 
-<span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">111</span>px<span class="token punctuation">;</span> 
-<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">150</span>px<span class="token punctuation">;</span> 
-<span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">150</span>px<span class="token punctuation">;</span> 
-<span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">75</span>px<span class="token punctuation">;</span> 
-<span class="token property">z-index</span><span class="token punctuation">:</span> <span class="token number">8</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.musicOn</span></span><span class="token punctuation">{</span> 
-<span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#033345</span><span class="token punctuation">;</span> 
-<span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">340</span>px<span class="token punctuation">;</span> 
-<span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span> 
-<span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span> 
-<span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span> 
-<span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.musicOn</span> b</span><span class="token punctuation">{</span> 
-<span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">15</span>px<span class="token punctuation">;</span> 
-<span class="token property">font-weight</span><span class="token punctuation">:</span> <span class="token number">300</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token comment" spellcheck="true">/* 旋转的动画 */</span> 
-<span class="token atrule"><span class="token rule">@keyframes</span> Rotate</span> <span class="token punctuation">{</span> 
-<span class="token selector">from </span><span class="token punctuation">{</span> 
-<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateZ</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector">to </span><span class="token punctuation">{</span> 
-<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateZ</span><span class="token punctuation">(</span><span class="token number">360</span>deg<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token punctuation">}</span> 
-<span class="token comment" spellcheck="true">/* 旋转的类名 */</span> 
-<span class="token selector"><span class="token class">.autoRotate</span> </span><span class="token punctuation">{</span> 
-<span class="token property">animation-name</span><span class="token punctuation">:</span> Rotate<span class="token punctuation">;</span> 
-<span class="token property">animation-iteration-count</span><span class="token punctuation">:</span> infinite<span class="token punctuation">;</span> 
-<span class="token property">animation-play-state</span><span class="token punctuation">:</span> paused<span class="token punctuation">;</span> 
-<span class="token property">animation-timing-function</span><span class="token punctuation">:</span> linear<span class="token punctuation">;</span> 
-<span class="token property">animation-duration</span><span class="token punctuation">:</span> <span class="token number">10</span>s<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token comment" spellcheck="true">/* 是否正在播放 */</span> 
-<span class="token selector"><span class="token class">.player_con.playing</span> <span class="token class">.disc</span>, 
-<span class="token class">.player_con.playing</span> <span class="token class">.cover</span> </span><span class="token punctuation">{</span> 
-<span class="token property">animation-play-state</span><span class="token punctuation">:</span> running<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.play_bar</span> </span><span class="token punctuation">{</span> 
-<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span> 
-<span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">170</span>px<span class="token punctuation">;</span> 
-<span class="token property">top</span><span class="token punctuation">:</span> -<span class="token number">10</span>px<span class="token punctuation">;</span> 
-<span class="token property">z-index</span><span class="token punctuation">:</span> <span class="token number">12</span><span class="token punctuation">;</span> 
-<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>-<span class="token number">25</span>deg<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-<span class="token property">transform-origin</span><span class="token punctuation">:</span> <span class="token number">12</span>px <span class="token number">12</span>px<span class="token punctuation">;</span> 
-<span class="token property">transition</span><span class="token punctuation">:</span> <span class="token number">1</span>s<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token comment" spellcheck="true">/* 播放杆 转回去 */</span> 
-<span class="token selector"><span class="token class">.player_con.playing</span> <span class="token class">.play_bar</span> </span><span class="token punctuation">{</span> 
-<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span><span class="token number">3</span>deg<span class="token punctuation">)</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.comment_wrapper</span> </span><span class="token punctuation">{</span> 
-<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">320</span>px<span class="token punctuation">;</span> 
-<span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">385</span>px<span class="token punctuation">;</span> 
-<span class="token property">list-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> 
-<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span> 
-<span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">660</span>px<span class="token punctuation">;</span> 
-<span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">0</span>px<span class="token punctuation">;</span> 
-<span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">25</span>px <span class="token number">10</span>px<span class="token punctuation">;</span> 
-<span class="token property">background-color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.comment_wrapper</span> <span class="token class">.title</span> </span><span class="token punctuation">{</span> 
-<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span> 
-<span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span> 
-<span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">25</span>px<span class="token punctuation">;</span> 
-<span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span> 
-<span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#033345</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.comment_wrapper</span> <span class="token class">.comment_list</span> </span><span class="token punctuation">{</span> 
-<span class="token property">overflow</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span> 
-<span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">410</span>px<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.comment_wrapper</span> <span class="token class">.comment_list</span><span class="token pseudo-element">::-webkit-scrollbar</span> </span><span class="token punctuation">{</span> 
-<span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.comment_wrapper</span> dl </span><span class="token punctuation">{</span> 
-<span class="token property">padding-top</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span> 
-<span class="token property">padding-left</span><span class="token punctuation">:</span> <span class="token number">55</span>px<span class="token punctuation">;</span> 
-<span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span> 
-<span class="token property">margin-bottom</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span> 
-<span class="token comment" spellcheck="true">/* border-bottom: 1px solid #3d82ae; */</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.comment_wrapper</span> dt </span><span class="token punctuation">{</span> 
-<span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span> 
-<span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">4</span>px<span class="token punctuation">;</span> 
-<span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.comment_wrapper</span> dt img </span><span class="token punctuation">{</span> 
-<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">40</span>px<span class="token punctuation">;</span> 
-<span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">40</span>px<span class="token punctuation">;</span> 
-<span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.comment_wrapper</span> dd </span><span class="token punctuation">{</span> 
-<span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">12</span>px<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.comment_wrapper</span> <span class="token class">.name</span> </span><span class="token punctuation">{</span> 
-<span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span> 
-<span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#033345</span><span class="token punctuation">;</span> 
-<span class="token property">padding-top</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.comment_wrapper</span> <span class="token class">.detail</span> </span><span class="token punctuation">{</span> 
-<span class="token comment" spellcheck="true">/* color: #3d82ac; */</span> 
-<span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#76b3d6</span><span class="token punctuation">;</span> 
-<span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span> 
-<span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token number">18</span>px<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.audio_con</span> </span><span class="token punctuation">{</span> 
-<span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">50</span>px<span class="token punctuation">;</span> 
-<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#f1f3f4</span><span class="token punctuation">;</span> 
-<span class="token property">border-bottom-left-radius</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span> 
-<span class="token property">border-bottom-right-radius</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.myaudio</span> </span><span class="token punctuation">{</span> 
-<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">980</span>px<span class="token punctuation">;</span> 
-<span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">40</span>px<span class="token punctuation">;</span> 
-<span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span> 
-<span class="token property">margin-left</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span> 
-<span class="token property">outline</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span> 
-<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#f1f3f4</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.video_con</span> video </span><span class="token punctuation">{</span> 
-<span class="token property">position</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span> 
-<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">1000</span>px<span class="token punctuation">;</span> 
-<span class="token comment" spellcheck="true">/* height: 544px; */</span> 
-<span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">50%</span><span class="token punctuation">;</span> 
-<span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">50%</span><span class="token punctuation">;</span> 
-<span class="token property">margin-top</span><span class="token punctuation">:</span> -<span class="token number">272</span>px<span class="token punctuation">;</span> 
-<span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span>-<span class="token number">50%</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-<span class="token property">z-index</span><span class="token punctuation">:</span> <span class="token number">990</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.video_con</span> <span class="token class">.mask</span> </span><span class="token punctuation">{</span> 
-<span class="token property">position</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span> 
-<span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span> 
-<span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span> 
-<span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span> 
-<span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span> 
-<span class="token property">z-index</span><span class="token punctuation">:</span> <span class="token number">980</span><span class="token punctuation">;</span> 
-<span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0.8</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span> 
-<span class="token selector"><span class="token class">.wy</span></span><span class="token punctuation">{</span>
-<span class="token property">font-family</span><span class="token punctuation">:</span> 华文宋体<span class="token punctuation">;</span> 
-<span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">232</span>, <span class="token number">233</span>, <span class="token number">236</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-<span class="token punctuation">}</span><span class="token punctuation">;</span> </code></pre>
+<h4 id="index-html代码"><a href="#index-html代码" class="headerlink" title="index.html代码"></a>index.html代码</h4><pre class=" language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width, initial-scale<span class="token punctuation">=</span>1.0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>王一昂的音乐播放器<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>shortcut icon<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>img/logo.png<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>image/x-icon<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>css/main.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>wrap<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>play_wrap<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>player<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>search_bar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>wy<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>一起网抑云<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+            <span class="token comment" spellcheck="true">&lt;!-- 搜索歌曲 --></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>输入要搜索的Music<span class="token punctuation">"</span></span> <span class="token attr-name">autocomplete</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>off<span class="token punctuation">"</span></span> 
+            <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>query<span class="token punctuation">'</span></span> <span class="token attr-name">@keyup.enter</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>searchMusic<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>center_con<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+              <span class="token comment" spellcheck="true">&lt;!--搜索歌曲列表--></span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>song_wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>song_list<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span> <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item in musicList<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>javascript:;<span class="token punctuation">"</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>playMusic(item.id)<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+                          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">></span></span>{{item.name}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">></span></span>
+                          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">></span></span>{{item.artists[0].name}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">></span></span>
+                          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">v-if</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item.mvid!<span class="token punctuation">=</span>0<span class="token punctuation">"</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>playMV(item.mvid)<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
+                  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+              <span class="token comment" spellcheck="true">&lt;!--歌曲信息容器--></span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>player_con<span class="token punctuation">"</span></span> <span class="token attr-name">:class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{playing:isPlaying}<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://i.loli.net/2020/03/23/gZHko2WlpJNcGPv.png<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>play_bar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://i.loli.net/2020/03/23/hQPuH4gNRx7XayI.png<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>disc autoRotate<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">:src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>musicCover<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>cover autoRotate<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>musicOn<span class="token punctuation">"</span></span> <span class="token attr-name">v-show</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>isPlaying<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>正在播放<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">></span></span>{{songPlaying}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">></span></span>
+                    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">></span></span>{{songArtist}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">></span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+              <span class="token comment" spellcheck="true">&lt;!--评论容器--></span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>comment_wrapper<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h5</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>title<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>热门留言<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h5</span><span class="token punctuation">></span></span>
+                  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>comment_list<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dl</span> <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item in hotComments<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dt</span><span class="token punctuation">></span></span>
+                              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">:src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>item.user.avatarUrl<span class="token punctuation">"</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+                          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dt</span><span class="token punctuation">></span></span>
+                          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>{{item.user.nickname}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">></span></span>
+                          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dd</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>detail<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>{{item.content}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dd</span><span class="token punctuation">></span></span>
+                      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dl</span><span class="token punctuation">></span></span>
+                  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>audio_con<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>audio</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>music1<span class="token punctuation">"</span></span> <span class="token attr-name">refs</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>audio<span class="token punctuation">"</span></span> <span class="token attr-name">:src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>musicUrl<span class="token punctuation">"</span></span> <span class="token attr-name">@play</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>play<span class="token punctuation">"</span></span> <span class="token attr-name">@pause</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>pause<span class="token punctuation">"</span></span> 
+              <span class="token attr-name">controls</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>controls<span class="token punctuation">"</span></span> <span class="token attr-name">autoplay</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>autoplay<span class="token punctuation">"</span></span> <span class="token attr-name">loop</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>loop<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>myaudio<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>audio</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>video_con<span class="token punctuation">"</span></span> <span class="token attr-name">v-show</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>isShow<span class="token punctuation">"</span></span><span class="token style-attr language-css"><span class="token attr-name"> <span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value"><span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>video</span> <span class="token attr-name">:src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>mvUrl<span class="token punctuation">"</span></span> <span class="token attr-name">controls</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>controls<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>video</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>mask<span class="token punctuation">"</span></span> <span class="token attr-name">@click</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>hide<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token comment" spellcheck="true">&lt;!-- 开发环境版本，包含了有帮助的命令行警告 --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/vue/dist/vue.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+    <span class="token comment" spellcheck="true">&lt;!--官网提供的axios在线地址--></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://unpkg.com/axios/dist/axios.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span> 
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>js/main.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></code></pre>
+<h4 id="main-js代码"><a href="#main-js代码" class="headerlink" title="main.js代码"></a>main.js代码</h4><pre class=" language-js"><code class="language-js"><span class="token comment" spellcheck="true">/*
+请求地址：https://autumnfish.cn/search
+请求方法：get
+请求参数：keywords 查询的关键字
+形影内容：歌曲搜索结果
+*/</span>
+<span class="token comment" spellcheck="true">/*
+歌曲url获取接口
+请求地址：https://autumnfish.cn/song/url
+请求方法：get
+请求参数：id（歌曲id）
+响应内容：歌曲的url地址
+ */</span>
+<span class="token comment" spellcheck="true">/*
+歌曲详情获取接口
+请求地址：https://autumnfish.cn/song/detail
+请求方法：get
+请求参数：ids（歌曲id）
+响应内容：歌曲详情，包含封面信息
+*/</span>
+<span class="token comment" spellcheck="true">/*
+热门评论获取
+请求地址：https://autumnfish.cn/comment/hot?type=0
+请求方法：get
+请求参数：id（歌曲id,type固定为0）
+响应内容：歌曲热门评论
+*/</span>
+<span class="token comment" spellcheck="true">/*
+mv地址获取
+请求地址：https://autumnfish.cn/mv/url
+请求方法：get
+请求参数：id（mvid,为0说明没有mv）
+响应内容：mv的地址
+*/</span>
+<span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    el<span class="token punctuation">:</span> <span class="token string">"#player"</span><span class="token punctuation">,</span>
+    data<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//查询关键字</span>
+        query<span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">// 歌曲播放</span>
+        musicList<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">//歌曲地址</span>
+        musicUrl<span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">//歌曲封面</span>
+        musicCover<span class="token punctuation">:</span> <span class="token string">"https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1605014906629&amp;di=2f802dcaa6465875de87930bc0c2f22c&amp;imgtype=0&amp;src=http%3A%2F%2Fwww.aqslzs.com%2Fuploads%2Fallimg%2F20200222%2F1582342132632_0.jpg"</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">//歌曲评论</span>
+        hotComments<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">//动画播放状态</span>
+        isPlaying<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">//遮罩层的显示状态</span>
+        isShow<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">//mv地址</span>
+        mvUrl<span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">//正在播放的歌曲</span>
+        songPlaying<span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">//正在播放的歌曲的演唱者</span>
+        songArtist<span class="token punctuation">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    methods<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">//歌曲搜索</span>
+        searchMusic<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">var</span> that <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+            axios<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">"https://autumnfish.cn/search?keywords="</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>query<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token comment" spellcheck="true">//console.log(response);</span>
+                    <span class="token comment" spellcheck="true">// console.log(response.data.result.songs);</span>
+                    that<span class="token punctuation">.</span>musicList <span class="token operator">=</span> response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>result<span class="token punctuation">.</span>songs<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+                <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">//歌曲播放</span>
+        playMusic<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>musicId<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//console.log(musicId);</span>
+            <span class="token keyword">var</span> that <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+            axios<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">"https://autumnfish.cn/song/url?id="</span> <span class="token operator">+</span> musicId<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token comment" spellcheck="true">// console.log(response);</span>
+                    <span class="token comment" spellcheck="true">// console.log(response.data.data[0].url);</span>
+                    that<span class="token punctuation">.</span>musicUrl <span class="token operator">=</span> response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>data<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>url<span class="token punctuation">;</span>
+                    <span class="token keyword">if</span><span class="token punctuation">(</span>that<span class="token punctuation">.</span>musicUrl<span class="token operator">!=</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                       <span class="token comment" spellcheck="true">//歌曲详情获取</span>
+                                axios<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">"https://autumnfish.cn/song/detail?ids="</span> <span class="token operator">+</span> musicId<span class="token punctuation">)</span>
+                                <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                                    <span class="token comment" spellcheck="true">// console.log(response);</span>
+                                    <span class="token comment" spellcheck="true">//console.log(response.data.songs[0].al.picUrl);</span>
+                                    that<span class="token punctuation">.</span>musicCover <span class="token operator">=</span> response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>songs<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>al<span class="token punctuation">.</span>picUrl<span class="token punctuation">;</span>
+                                    that<span class="token punctuation">.</span>songPlaying <span class="token operator">=</span> response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>songs<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+                                    that<span class="token punctuation">.</span>songArtist <span class="token operator">=</span> response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>songs<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>ar<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+                                <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+                                <span class="token comment" spellcheck="true">//歌曲评论获取</span>
+                                axios<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">"https://autumnfish.cn/comment/hot?type=0&amp;id="</span> <span class="token operator">+</span> musicId<span class="token punctuation">)</span>
+                                <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                                    <span class="token comment" spellcheck="true">//console.log(response.data.hotComments);</span>
+                                    that<span class="token punctuation">.</span>hotComments <span class="token operator">=</span> response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>hotComments<span class="token punctuation">;</span>
+                                <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">)</span> 
+                    <span class="token punctuation">}</span>
+                    <span class="token keyword">else</span><span class="token punctuation">{</span>
+                        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"这首歌的资源跑路了！！！"</span><span class="token punctuation">)</span>
+                    <span class="token punctuation">}</span> 
+                <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">//歌曲播放</span>
+        play<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//console.log("play");</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>isPlaying <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">//歌曲暂停</span>
+        pause<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//console.log("pause");</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>isPlaying <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">//播放mv</span>
+        playMV<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>mvid<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">var</span> a <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"music1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            a<span class="token punctuation">.</span><span class="token function">pause</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">var</span> that <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+            axios<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token string">"https://autumnfish.cn/mv/url?id="</span> <span class="token operator">+</span> mvid<span class="token punctuation">)</span>
+                <span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span>response<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token comment" spellcheck="true">// console.log(response);</span>
+                    <span class="token comment" spellcheck="true">// console.log(response.data.data.url);</span>
+                    that<span class="token punctuation">.</span>isShow <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+                    <span class="token comment" spellcheck="true">// that.musicUrl = "";</span>
+                    <span class="token comment" spellcheck="true">// that.isPlaying = false;</span>
+                    <span class="token comment" spellcheck="true">// that.$refs.audio.pause();</span>
+
+                    that<span class="token punctuation">.</span>mvUrl <span class="token operator">=</span> response<span class="token punctuation">.</span>data<span class="token punctuation">.</span>data<span class="token punctuation">.</span>url<span class="token punctuation">;</span>
+                <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>err<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token comment" spellcheck="true">//隐藏遮罩层</span>
+        hide<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>isShow <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+            <span class="token keyword">this</span><span class="token punctuation">.</span>mvUrl <span class="token operator">=</span> <span class="token string">""</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<h4 id="main-css代码"><a href="#main-css代码" class="headerlink" title="main.css代码"></a>main.css代码</h4><pre class=" language-css"><code class="language-css"><span class="token selector">body,
+    ul,
+    dl,
+    dd </span><span class="token punctuation">{</span>
+      <span class="token property">margin</span><span class="token punctuation">:</span> <span class="token number">0</span>px<span class="token punctuation">;</span>
+      <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">0</span>px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token selector">body</span><span class="token punctuation">{</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#76b3d6</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.wrap</span> </span><span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">/* position: fixed; */</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#f3f3f3</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">/* background-size: 100% 100%; */</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.play_wrap</span> </span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">1000</span>px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">544</span>px<span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">50%</span><span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">50%</span><span class="token punctuation">;</span>
+  <span class="token property">margin-left</span><span class="token punctuation">:</span> -<span class="token number">500</span>px<span class="token punctuation">;</span>
+  <span class="token property">margin-top</span><span class="token punctuation">:</span> -<span class="token number">272</span>px<span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">/* background-color: #f9f9f9;  */</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.search_bar</span> </span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">60</span>px<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#033345</span><span class="token punctuation">;</span>
+  <span class="token property">border-top-left-radius</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span>
+  <span class="token property">border-top-right-radius</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/* flex属性：交叉轴对齐方式*/</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> space-between<span class="token punctuation">;</span><span class="token comment" spellcheck="true">/* flex属性：项目在主轴上的对齐方式*/</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+  <span class="token property">z-index</span><span class="token punctuation">:</span> <span class="token number">11</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.search_bar</span> img </span><span class="token punctuation">{</span>
+  <span class="token property">margin-left</span><span class="token punctuation">:</span> <span class="token number">23</span>px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.search_bar</span> input </span><span class="token punctuation">{</span>
+  <span class="token property">margin-right</span><span class="token punctuation">:</span> <span class="token number">53</span>px<span class="token punctuation">;</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">296</span>px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">34</span>px<span class="token punctuation">;</span>
+  <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span>
+  <span class="token property">border</span><span class="token punctuation">:</span> <span class="token number">0</span>px<span class="token punctuation">;</span>
+  <span class="token property">background</span><span class="token punctuation">:</span> <span class="token url">url("https://i.loli.net/2020/03/23/9FeKnVlohsY3krO.png")</span> <span class="token number">265</span>px center no-repeat
+  <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">234</span>, <span class="token number">236</span>, <span class="token number">236</span>, <span class="token number">0.192</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">text-indent</span><span class="token punctuation">:</span> <span class="token number">15</span>px<span class="token punctuation">;</span>
+  <span class="token property">outline</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#f3f3f3</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.search_bar</span> input<span class="token pseudo-element">::-webkit-input-placeholder</span></span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#f3f3f3</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.center_con</span> </span><span class="token punctuation">{</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">435</span>px<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">255</span>, <span class="token number">255</span>, <span class="token number">255</span>, <span class="token number">0.5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.song_wrapper</span> </span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">320</span>px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">435</span>px<span class="token punctuation">;</span>
+  <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span>
+  <span class="token property">list-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+  <span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">0</span>px<span class="token punctuation">;</span>
+  <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">0</span>px<span class="token punctuation">;</span>
+  <span class="token property">z-index</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.song_list</span> </span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+    <span class="token property">overflow-y</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+    <span class="token property">overflow-x</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token class">.song_list</span><span class="token pseudo-element">::-webkit-scrollbar</span> </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token class">.song_list</span> li </span><span class="token punctuation">{</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">13</span>px<span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#033345</span><span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">40</span>px<span class="token punctuation">;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">flex-wrap</span><span class="token punctuation">:</span> wrap<span class="token punctuation">;</span>
+    <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">300</span>px<span class="token punctuation">;</span>
+    <span class="token property">padding-left</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token class">.song_list</span> li<span class="token pseudo-class">:nth-child(odd)</span> </span><span class="token punctuation">{</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">118</span>,<span class="token number">179</span>,<span class="token number">214</span>, <span class="token number">0.3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token class">.song_list</span> li a </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">17</span>px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">17</span>px<span class="token punctuation">;</span>
+    <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url">url("https://s1.ax1x.com/2020/11/09/BHiilD.png")</span><span class="token punctuation">;</span>
+    <span class="token property">background-size</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+    <span class="token property">margin-right</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
+    <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token class">.song_list</span> li b </span><span class="token punctuation">{</span>
+    <span class="token property">font-weight</span><span class="token punctuation">:</span> normal<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100</span>px<span class="token punctuation">;</span>
+    <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+    <span class="token property">text-overflow</span><span class="token punctuation">:</span> ellipsis<span class="token punctuation">;</span>
+    <span class="token property">padding-left</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span>
+    <span class="token property">white-space</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token class">.song_list</span> li span </span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">23</span>px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">17</span>px<span class="token punctuation">;</span>
+    <span class="token property">margin-right</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token class">.song_list</span> li span i </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> block<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">/* background-color: #033345; */</span>
+    <span class="token property">background-size</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">17</span>px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">17</span>px<span class="token punctuation">;</span>
+    <span class="token property">cursor</span><span class="token punctuation">:</span> pointer<span class="token punctuation">;</span>
+    <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token url">url("https://s1.ax1x.com/2020/11/09/BHiw1U.png")</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token class">.player_con</span> </span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">340</span>px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">435</span>px<span class="token punctuation">;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">320</span>px<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">/* background-color: #3d82ae; */</span>
+    <span class="token comment" spellcheck="true">/* background-color: #3a96a8; */</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">0</span>px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token class">.disc</span> </span><span class="token punctuation">{</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">45</span>px<span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">60</span>px<span class="token punctuation">;</span>
+    <span class="token property">z-index</span><span class="token punctuation">:</span> <span class="token number">9</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token class">.cover</span> </span><span class="token punctuation">{</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">98</span>px<span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">111</span>px<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">150</span>px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">150</span>px<span class="token punctuation">;</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">75</span>px<span class="token punctuation">;</span>
+    <span class="token property">z-index</span><span class="token punctuation">:</span> <span class="token number">8</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.musicOn</span></span><span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#033345</span><span class="token punctuation">;</span>
+  <span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">340</span>px<span class="token punctuation">;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+  <span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector"><span class="token class">.musicOn</span> b</span><span class="token punctuation">{</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">15</span>px<span class="token punctuation">;</span>
+    <span class="token property">font-weight</span><span class="token punctuation">:</span>  <span class="token number">300</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">/* 旋转的动画 */</span>
+  <span class="token atrule"><span class="token rule">@keyframes</span> Rotate</span> <span class="token punctuation">{</span>
+    <span class="token selector">from </span><span class="token punctuation">{</span>
+      <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateZ</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">to </span><span class="token punctuation">{</span>
+      <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotateZ</span><span class="token punctuation">(</span><span class="token number">360</span>deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">/* 旋转的类名 */</span>
+  <span class="token selector"><span class="token class">.autoRotate</span> </span><span class="token punctuation">{</span>
+    <span class="token property">animation-name</span><span class="token punctuation">:</span> Rotate<span class="token punctuation">;</span>
+    <span class="token property">animation-iteration-count</span><span class="token punctuation">:</span> infinite<span class="token punctuation">;</span>
+    <span class="token property">animation-play-state</span><span class="token punctuation">:</span> paused<span class="token punctuation">;</span>
+    <span class="token property">animation-timing-function</span><span class="token punctuation">:</span> linear<span class="token punctuation">;</span>
+    <span class="token property">animation-duration</span><span class="token punctuation">:</span> <span class="token number">10</span>s<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">/* 是否正在播放 */</span>
+  <span class="token selector"><span class="token class">.player_con.playing</span> <span class="token class">.disc</span>,
+  <span class="token class">.player_con.playing</span> <span class="token class">.cover</span> </span><span class="token punctuation">{</span>
+    <span class="token property">animation-play-state</span><span class="token punctuation">:</span> running<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token class">.play_bar</span> </span><span class="token punctuation">{</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">170</span>px<span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> -<span class="token number">10</span>px<span class="token punctuation">;</span>
+    <span class="token property">z-index</span><span class="token punctuation">:</span> <span class="token number">12</span><span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>-<span class="token number">25</span>deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">transform-origin</span><span class="token punctuation">:</span> <span class="token number">12</span>px <span class="token number">12</span>px<span class="token punctuation">;</span>
+    <span class="token property">transition</span><span class="token punctuation">:</span> <span class="token number">1</span>s<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">/* 播放杆 转回去 */</span>
+  <span class="token selector"><span class="token class">.player_con.playing</span> <span class="token class">.play_bar</span> </span><span class="token punctuation">{</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span><span class="token number">3</span>deg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token class">.comment_wrapper</span> </span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">320</span>px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">385</span>px<span class="token punctuation">;</span>
+    <span class="token property">list-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">660</span>px<span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">0</span>px<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">25</span>px <span class="token number">10</span>px<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> white<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token class">.comment_wrapper</span> <span class="token class">.title</span> </span><span class="token punctuation">{</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">25</span>px<span class="token punctuation">;</span>
+    <span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#033345</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token class">.comment_wrapper</span> <span class="token class">.comment_list</span> </span><span class="token punctuation">{</span>
+    <span class="token property">overflow</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">410</span>px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token class">.comment_wrapper</span> <span class="token class">.comment_list</span><span class="token pseudo-element">::-webkit-scrollbar</span> </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token class">.comment_wrapper</span> dl </span><span class="token punctuation">{</span>
+    <span class="token property">padding-top</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span>
+    <span class="token property">padding-left</span><span class="token punctuation">:</span> <span class="token number">55</span>px<span class="token punctuation">;</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span>
+    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">/* border-bottom: 1px solid #3d82ae; */</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token class">.comment_wrapper</span> dt </span><span class="token punctuation">{</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">4</span>px<span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token class">.comment_wrapper</span> dt img </span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">40</span>px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">40</span>px<span class="token punctuation">;</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token class">.comment_wrapper</span> dd </span><span class="token punctuation">{</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">12</span>px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token class">.comment_wrapper</span> <span class="token class">.name</span> </span><span class="token punctuation">{</span>
+    <span class="token property">font-weight</span><span class="token punctuation">:</span> bold<span class="token punctuation">;</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#033345</span><span class="token punctuation">;</span>
+    <span class="token property">padding-top</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token class">.comment_wrapper</span> <span class="token class">.detail</span> </span><span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">/* color: #3d82ac; */</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> <span class="token hexcode">#76b3d6</span><span class="token punctuation">;</span>
+    <span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
+    <span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token number">18</span>px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token class">.audio_con</span> </span><span class="token punctuation">{</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">50</span>px<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#f1f3f4</span><span class="token punctuation">;</span>
+    <span class="token property">border-bottom-left-radius</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span>
+    <span class="token property">border-bottom-right-radius</span><span class="token punctuation">:</span> <span class="token number">20</span>px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token class">.myaudio</span> </span><span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">980</span>px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">40</span>px<span class="token punctuation">;</span>
+    <span class="token property">margin-top</span><span class="token punctuation">:</span> <span class="token number">5</span>px<span class="token punctuation">;</span>
+    <span class="token property">margin-left</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span>
+    <span class="token property">outline</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token hexcode">#f1f3f4</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token class">.video_con</span> video </span><span class="token punctuation">{</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">1000</span>px<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">/* height: 544px; */</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">50%</span><span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">50%</span><span class="token punctuation">;</span>
+    <span class="token property">margin-top</span><span class="token punctuation">:</span> -<span class="token number">272</span>px<span class="token punctuation">;</span>
+    <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateX</span><span class="token punctuation">(</span>-<span class="token number">50%</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">z-index</span><span class="token punctuation">:</span> <span class="token number">990</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token class">.video_con</span> <span class="token class">.mask</span> </span><span class="token punctuation">{</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> <span class="token number">100%</span><span class="token punctuation">;</span>
+    <span class="token property">left</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">top</span><span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token property">z-index</span><span class="token punctuation">:</span> <span class="token number">980</span><span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0.8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector"><span class="token class">.wy</span></span><span class="token punctuation">{</span>
+      <span class="token property">font-family</span><span class="token punctuation">:</span> 华文宋体<span class="token punctuation">;</span>
+      <span class="token property">color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span><span class="token number">232</span>, <span class="token number">233</span>, <span class="token number">236</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span></code></pre>
 <h3 id="存在问题"><a href="#存在问题" class="headerlink" title="存在问题"></a>存在问题</h3><p>在```后加入具体标签后，花括号{}或被替换为&amp;#123;&amp;#125;,<del>该问题尚未解决</del>。</p>
 <h3 id="问题解决"><a href="#问题解决" class="headerlink" title="问题解决"></a>问题解决</h3><p>将hexo版本降为4.2.1，在根目录下输入<code>npm install hexo@4.2.1</code>即可。</p>
 
