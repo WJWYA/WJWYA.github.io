@@ -10,7 +10,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>归档 | WyaBlog</title>
+  <title>Vue脚手架搭建 | WyaBlog</title>
   
     
 <link rel="stylesheet" href="/js/aos/aos.css">
@@ -306,71 +306,323 @@
   <a href="https://github.com/yuang01/hexo-theme-bamboo" target="_blank" rel="noopener" class="github-corner color-primary" aria-label="View source on GitHub"><svg width="60" height="60" viewBox="0 0 250 250" style="fill:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 </header>
     <main class="main" style="margin-top: 60px;">
-      <div style="width: 100%;height: 50vh;overflow: hidden;background-image: url('https://s1.ax1x.com/2020/11/10/Bq36Ld.jpg');background-size: cover; 
-background-position: center center;">
+      
+
+
+<div class="post-detail-header" style="background: url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1605606242407&amp;di=cb33be2e7d76fc8b38fbfbdc510ff3b8&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20170630%2F86af9f8c0aa74e2dba8a356eb11e02ee_th.jpg) no-repeat; background-size: cover; 
+  background-position: center center;">
+  
+    <span class="title">Vue脚手架搭建</span>
+  
 </div>
-<section class="archive">
-  <div class="archive-content">
-    <ul class="post-archive">
+<div class="row justify-center">
+  <div class="main-content">
+    <article class="post post-detail">
       
       
+      <div class="post-meta">
+        <i class="fa fa-clock-o" aria-hidden="true"></i>
+        <span class="post-time">2020-11-17</span>
+      </div>
+      
+      <div class="post-tags-categories">
         
+        <div class="tags">
+          <i class="iconfont icontag"></i>
           
-          <div class="year" data-aos="zoom-in-up">
-              <div class="bullet"></div>
-              <a href="/archives/2020">2020</a>
-          </div>
+            <a href="/tags/vue/" class="">
+              vue
+            </a>
+          
+            <a href="/tags/vue-cli/" class="">
+              vue-cli
+            </a>
+          
+        </div>
         
-        <li class="post-item" data-aos="fade-left">
-          <span class="post-date">11-17</span>
-          <a class="post-title" href="/2020/11/17/Vue-cli/">Vue脚手架搭建</a>
-        </li>
-      
         
-        <li class="post-item" data-aos="fade-left">
-          <span class="post-date">11-13</span>
-          <a class="post-title" href="/2020/11/13/flex/">Flex布局</a>
-        </li>
-      
+        <div class="categories">
+          <i class="iconfont iconbookmark1"></i>
+          
+            <a href="/categories/%E6%8A%80%E6%9C%AF/" class="">
+              技术
+            </a>
+          
+        </div>
         
-        <li class="post-item" data-aos="fade-left">
-          <span class="post-date">11-12</span>
-          <a class="post-title" href="/2020/11/12/position/">position定位用法复习</a>
-        </li>
+      </div>
+      <div class="post-content">
+        <p>&emsp;&emsp;vue-cli提供了一个官方命令行工具，可用于快速搭建大型单页应用。该工具提供了开箱即用的构建工具配置，带来了现代化的前端开发流程，仅需要几分钟即可创建并启动一个带热重载、保存时静态检查以及可用于生产环境的构建配置的项目。（热重载：修改代码后页面自动刷新）。最近研究了一下vue脚手架+element-ui以及echarts的初步使用，不得不说element组件太🐂🍺了~</p>
+<hr>
+<h3 id="一、安装node-js"><a href="#一、安装node-js" class="headerlink" title="一、安装node.js"></a>一、安装node.js</h3><blockquote>
+<p>进入<a href="https://nodejs.org/en/" target="_blank" rel="noopener">官网</a>下载node.js</p>
+</blockquote>
+<p><img src="https://s3.ax1x.com/2020/11/17/DVEil9.jpg"><br>安装成功后就可以使用<code>npm</code>命令了啦~<code>npm</code>(node package manager)是node.js的包管理器，可以用于node插件的安装、卸载以及管理依赖等。如使用<code>npm</code>安装插件，则需在终端输入<code>npm install &lt;name&gt;</code>。</p>
+<h3 id="二、安装cnpm"><a href="#二、安装cnpm" class="headerlink" title="二、安装cnpm"></a>二、安装cnpm</h3><p>&emsp;&emsp;建议安装<code>cnpm</code>，由于<code>npm</code>服务器在国外，受网络影响较大，偶尔会出现异常，因此淘宝做了一个完整的<code>npmjs.org</code>镜像。</p>
+<blockquote>
+<p>安装：终端输入<code>npm install -g cnpm --registry=https://regsitry.npm.taobao.org</code><br>查看版本：终端输入<code>cnpm -v</code></p>
+</blockquote>
+<h3 id="三、安装vue-cli脚手架构建工具"><a href="#三、安装vue-cli脚手架构建工具" class="headerlink" title="三、安装vue-cli脚手架构建工具"></a>三、安装vue-cli脚手架构建工具</h3><blockquote>
+<p>安装：终端输入<code>cnpm install vue-cli -g</code>或者<code>npm install vue-cli -g</code><br><strong>注意</strong>：这里安装的是老版本的<code>vue-cli</code>（1.x或2.x）新版本<code>vue-cli</code>改为<code>@vue/cli</code>即可。<br>查看版本：终端输入<code>vue -V</code><br><strong>注意</strong>：这里的是大写V。</p>
+</blockquote>
+<h3 id="四、创建基于webpack模板的新项目"><a href="#四、创建基于webpack模板的新项目" class="headerlink" title="四、创建基于webpack模板的新项目"></a>四、创建基于webpack模板的新项目</h3><p>&emsp;&emsp;在创建项目之前，要先选定已经建好的目录，在该目录下搭建项目。</p>
+<blockquote>
+<p>创建项目：在指定终端目录下输入<code>vue init webpack my-app</code>,其中<code>my-app</code>为自定义的项目名称。</p>
+</blockquote>
+<p><img src="https://s3.ax1x.com/2020/11/17/DVcWP1.jpg"><br>&emsp;&emsp;安装完成后：<br><img src="https://s3.ax1x.com/2020/11/17/DVgSsS.jpg"></p>
+<h3 id="五、运行项目"><a href="#五、运行项目" class="headerlink" title="五、运行项目"></a>五、运行项目</h3><p>&emsp;&emsp;终端进入刚创建的新项目<code>my-app</code>中，然后运行项目。</p>
+<blockquote>
+<p>在终端目录my-element下输入<code>cd my-app</code>，然后输入<code>cnpm run dev</code>或者<code>npm run dev</code>。</p>
+</blockquote>
+<p><img src="https://s3.ax1x.com/2020/11/17/DVg4Fs.jpg"></p>
+<blockquote>
+<p>本地浏览器地址栏输入<code>http://localhost:8080</code>,浏览器将显示以下界面：</p>
+</blockquote>
+<p><img src="https://s3.ax1x.com/2020/11/17/DVgxYR.jpg"></p>
+<blockquote>
+<p><strong>注意</strong>:在项目运过程中，该终端不可以关闭，关闭后就无法连接到本地端口。停止运行项目可在终端窗口按<code>control</code>+<code>C</code>。</p>
+</blockquote>
+<h3 id="六、安装项目所需要的依赖"><a href="#六、安装项目所需要的依赖" class="headerlink" title="六、安装项目所需要的依赖"></a>六、安装项目所需要的依赖</h3><p>&emsp;&emsp;刚初始化的项目没有依赖，如果在运行中报错，可以输入在终端项目所在目录输入<code>cnpm install</code>或者<code>npm install</code></p>
+
+      </div>
       
-        
-        <li class="post-item" data-aos="fade-left">
-          <span class="post-date">11-10</span>
-          <a class="post-title" href="/2020/11/10/%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/">音乐播放器</a>
-        </li>
+        <div class="copyright">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+    <strong>作者:  </strong>WY</a>
+    </li>
+    <li class="post-copyright-link">
+    <strong>文章链接:  </strong>
+    <a href="/2020/11/17/Vue-cli/" target="_blank" title="Vue脚手架搭建">https://WJWYA.github.io/2020/11/17/Vue-cli/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明:   </strong>
+      本网站所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+      许可协议。转载请注明出处!
+    </li>
+  </ul>
+<div>
       
-        
-        <li class="post-item" data-aos="fade-left">
-          <span class="post-date">11-10</span>
-          <a class="post-title" href="/2020/11/10/markdown/">Markdown</a>
-        </li>
-      
-        
-        <li class="post-item" data-aos="fade-left">
-          <span class="post-date">11-09</span>
-          <a class="post-title" href="/2020/11/09/11.9%E6%97%A5%E6%8A%A5/">2020.11.9日报</a>
-        </li>
-      
-        
-        <li class="post-item" data-aos="fade-left">
-          <span class="post-date">11-08</span>
-          <a class="post-title" href="/2020/11/08/hexo/">Hello Hexo</a>
-        </li>
-      
-        
-        <li class="post-item" data-aos="fade-left">
-          <span class="post-date">11-07</span>
-          <a class="post-title" href="/2020/11/07/vue/">Hello Vue</a>
-        </li>
-      
-    </ul>
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      <div class="post-nav">
+
+
+
+  <div class="post-nav-next post-nav-item">
+    <a href="/2020/11/13/flex/">
+      <span>
+        下一篇:    Flex布局 
+      </span>
+    </a>
   </div>
+
+</div>
+
+    
+    
+
+    <!-- 打赏 -->
+    
+      <div id="appDonate" class="post-donate">
+  <div id="donate_board" class="donate_bar center" ref="donate">
+    <a id="btn_donate" class="btn_donate" href="javascript:;" title="打赏" @click="showDialogDrawer()"></a>
+  </div>
+  <transition name="fade">
+    <div 
+      class="donate-box-mask"
+      v-cloak 
+      v-if="visible"
+      @click="cancelDialogDrawer()"
+    >
+    </div>
+  </transition>
+  <transition name="bounce">
+    <div class="donate-box" v-cloak v-if="visible">
+      <div class="donate-box_close">
+        <i class="fa fa-times" aria-hidden="true" @click="cancelDialogDrawer"></i>
+      </div>
+      <div class="donate-box_title">
+        <h4>
+          你的赏识是我前进的动力
+        </h4>
+      </div>
+      <div class="donate-box_tab">
+        <div class="Alipay" :class="{'active': tabActive === 'Alipay'}" @click="changeTabActive('Alipay')">
+          支付宝
+        </div>
+        <div class="WeChatpay" :class="{'active': tabActive === 'WeChatpay'}" @click="changeTabActive('WeChatpay')">
+          微信
+        </div>
+      </div>
+      <div class="donate-box_img">
+        <div class="AlipayImg" v-if="tabActive === 'Alipay'">
+          <img src="/medias/zfb.png" alt="支付宝打赏" />
+        </div> 
+        <div class="WeChatpayImg" v-if="tabActive === 'WeChatpay'">
+          <img src="/medias/wx.png" alt="微信打赏" />
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>
+
+<script>
+  var body = document.body || document.documentElement || window;
+  var vm = new Vue({
+    el: '#appDonate',
+    data: {
+      visible: false,
+      tabActive: 'Alipay',
+      top: 0,
+    },
+    computed: {
+    },
+    mounted() {
+    },
+    methods: {
+      showDialogDrawer() {
+        this.visible = true;
+        // 防止页面滚动，只能让弹框滚动
+        // function getScroll() {
+        //   return {
+        //     left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0,
+        //     top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+        //   };
+        // }
+        this.top = $(document).scrollTop() // or getScroll().top
+        body.style.cssText = 'width: 100%; height: 100%; position: fixed; top: -' + this.top + 'px; left: 0; overflow: hidden;';
+      },
+      cancelDialogDrawer() {
+        this.visible = false;
+        body.removeAttribute('style');
+        $(document).scrollTop(this.top)
+      },
+      changeTabActive(name) {
+        this.tabActive = name;
+      }
+    },
+    created() {}
+  })
+</script>
+    
+
+    <!-- 分享 -->
+    
+      <!-- https://github.com/overtrue/share.js -->
+
+<div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+
+
+
+<script src="/js/shareJs/social-share.min.js"></script>
+
+</script>
+
+<style>
+  .social-share {
+    margin: 20px 0;
+  }
+</style>
+
+
+    
+
+    <!-- 评论 -->
+      
+        
+          <section id="comments" style="padding: 1em; background: rgba(255, 255, 255, 0.5); margin: 15px auto;" data-aos="fade-up">
+	<div id="vcomment" class="comment"></div>
+	<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/valine@1/dist/Valine.min.js"></script>
+	<script>
+		new Valine({
+			el: '#vcomment',
+			notify: false,
+			verify: false,
+			app_id: "nIPEGVTK4mU5ymN9XbUhdSn8-gzGzoHsz",
+			app_key: "ANh6T3HhBptKsuO91Lf5hS2w",
+			placeholder: "客官，说点什么吧",
+			avatar: ""
+		});
+	</script>
 </section>
+<style>
+#vcomment textarea {
+	background: url('/medias/comment_bg7.png') 100% 100% no-repeat;
+}
+</style>
+
+        
+      
+  </div>
+
+  
+    <div class="toc-aside">
+      <div class="toc-main">
+        <div class="toc-aside-title">
+          <i class="fa fa-list-ul" aria-hidden="true"></i><span>目录</span>
+        </div>
+        <div class="toc-content">
+          <link href="/js/tocbot/tocbot.css" rel="stylesheet">
+<script src="/js/tocbot/tocbot.min.js"></script>
+<div class="toc"></div>
+
+<script>
+  if ($('.toc').length > 0) {
+    var headerEl = 'h2, h3, h4',  //headers 
+      content = '.post-detail',//文章容器
+      idArr = {};  //标题数组以确定是否增加索引id
+      //add #id
+
+    $(content).children(headerEl).each(function () {
+      //去除空格以及多余标点
+      var headerId = $(this).text().replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?|\：|\，|\。]/g, '');
+
+      headerId = headerId.toLowerCase();
+      if (idArr[headerId]) {
+        //id已经存在
+        $(this).attr('id', headerId + '-' + idArr[headerId]);
+        idArr[headerId]++;
+      }
+      else {
+        //id未存在
+        idArr[headerId] = 1;
+        $(this).attr('id', headerId);
+      }
+    });
+
+    tocbot.init({
+      // Where to render the table of contents.
+      tocSelector: '.toc',
+      // Where to grab the headings to build the table of contents.
+      contentSelector: content,
+      // Which headings to grab inside of the contentSelector element.
+      headingSelector: headerEl,
+      scrollSmooth: true,
+      scrollSmoothOffset: -80,
+      headingsOffset: 130,
+      positionFixedSelector: '.toc-main',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  }
+
+</script>
+
+<style>
+.is-position-fixed {
+  position:fixed !important;
+  top: 64px;
+}
+
+</style>
+        </div>
+      </div>
+    </div>
+  
+</div>
 
     </main>
     <div class="footer bg-color">
