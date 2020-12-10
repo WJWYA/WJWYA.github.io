@@ -10,7 +10,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>Vue脚手架搭建 | WyaBlog</title>
+  <title>vue项目搭建 | WyaBlog</title>
   
     
 <link rel="stylesheet" href="/js/aos/aos.css">
@@ -309,10 +309,10 @@
       
 
 
-<div class="post-detail-header" style="background: url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1605606242407&amp;di=cb33be2e7d76fc8b38fbfbdc510ff3b8&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20170630%2F86af9f8c0aa74e2dba8a356eb11e02ee_th.jpg) no-repeat; background-size: cover; 
+<div class="post-detail-header" style="background: url(https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1607591833104&amp;di=816165c581d38af2ddee490a01772712&amp;imgtype=0&amp;src=http%3A%2F%2Fwww.boy888.cn%2Fwp-content%2Fuploads%2F2020%2F06%2Fvue.jpg) no-repeat; background-size: cover; 
   background-position: center center;">
   
-    <span class="title">Vue脚手架搭建</span>
+    <span class="title">vue项目搭建</span>
   
 </div>
 <div class="row justify-center">
@@ -322,7 +322,7 @@
       
       <div class="post-meta">
         <i class="fa fa-clock-o" aria-hidden="true"></i>
-        <span class="post-time">2020-11-17</span>
+        <span class="post-time">2020-12-10</span>
       </div>
       
       <div class="post-tags-categories">
@@ -330,12 +330,20 @@
         <div class="tags">
           <i class="iconfont icontag"></i>
           
-            <a href="/tags/vue/" class="">
-              vue
+            <a href="/tags/axios/" class="">
+              axios
             </a>
           
             <a href="/tags/vue-cli/" class="">
               vue-cli
+            </a>
+          
+            <a href="/tags/vue-router/" class="">
+              vue-router
+            </a>
+          
+            <a href="/tags/element-ui/" class="">
+              element-ui
             </a>
           
         </div>
@@ -352,37 +360,128 @@
         
       </div>
       <div class="post-content">
-        <p>&emsp;&emsp;vue-cli提供了一个官方命令行工具，可用于快速搭建大型单页应用。该工具提供了开箱即用的构建工具配置，带来了现代化的前端开发流程，仅需要几分钟即可创建并启动一个带热重载、保存时静态检查以及可用于生产环境的构建配置的项目。（热重载：修改代码后页面自动刷新）。最近研究了一下vue脚手架+element-ui以及echarts的初步使用，不得不说element组件太🐂🍺了~</p>
+        <p>&emsp;&emsp;本文章回顾了本人在学习过程中的vue-cli环境配置，axios、vue-router以及element-ui组件的安装。</p>
 <hr>
-<h3 id="一、安装node-js"><a href="#一、安装node-js" class="headerlink" title="一、安装node.js"></a>一、安装node.js</h3><blockquote>
-<p>进入<a href="https://nodejs.org/en/" target="_blank" rel="noopener">官网</a>下载node.js</p>
-</blockquote>
-<p><img src="https://s3.ax1x.com/2020/11/17/DVEil9.jpg"><br>安装成功后就可以使用<code>npm</code>命令了啦~<code>npm</code>(node package manager)是node.js的包管理器，可以用于node插件的安装、卸载以及管理依赖等。如使用<code>npm</code>安装插件，则需在终端输入<code>npm install &lt;name&gt;</code>。</p>
-<h3 id="二、安装cnpm"><a href="#二、安装cnpm" class="headerlink" title="二、安装cnpm"></a>二、安装cnpm</h3><p>&emsp;&emsp;建议安装<code>cnpm</code>，由于<code>npm</code>服务器在国外，受网络影响较大，偶尔会出现异常，因此淘宝做了一个完整的<code>npmjs.org</code>镜像。</p>
+<h2 id="vue-cli-环境配置"><a href="#vue-cli-环境配置" class="headerlink" title="vue-cli 环境配置"></a>vue-cli 环境配置</h2><p>创建vue-cli项目之前，要安装好node.js、npm以及vue-cli脚手架，在之前的<a href="https://wjwya.top/2020/11/17/Vue-cli/" target="_blank" rel="noopener">vue脚手架搭建</a>文章中做过介绍，这里不再重复，下面从不同点开始回顾。</p>
+<h3 id="vue-cli-项目创建及运行"><a href="#vue-cli-项目创建及运行" class="headerlink" title="vue-cli 项目创建及运行"></a>vue-cli 项目创建及运行</h3><p>在根目录下：</p>
 <blockquote>
-<p>安装：终端输入<code>npm install -g cnpm --registry=https://regsitry.npm.taobao.org</code><br>查看版本：终端输入<code>cnpm -v</code></p>
+<p>创建：终端输入<code>vue create myprogram</code></p>
 </blockquote>
-<h3 id="三、安装vue-cli脚手架构建工具"><a href="#三、安装vue-cli脚手架构建工具" class="headerlink" title="三、安装vue-cli脚手架构建工具"></a>三、安装vue-cli脚手架构建工具</h3><blockquote>
-<p>安装：终端输入<code>cnpm install vue-cli -g</code>或者<code>npm install vue-cli -g</code><br><strong>注意</strong>：这里安装的是老版本的<code>vue-cli</code>（1.x或2.x）新版本<code>vue-cli</code>改为<code>@vue/cli</code>即可。<br>查看版本：终端输入<code>vue -V</code><br><strong>注意</strong>：这里的是大写V。</p>
-</blockquote>
-<h3 id="四、创建基于webpack模板的新项目"><a href="#四、创建基于webpack模板的新项目" class="headerlink" title="四、创建基于webpack模板的新项目"></a>四、创建基于webpack模板的新项目</h3><p>&emsp;&emsp;在创建项目之前，要先选定已经建好的目录，在该目录下搭建项目。</p>
+<p><strong>注意1：</strong> <code>vue create</code>是<code>vue-cli3.x</code>的初始化方式，目前模板是固定的，模板选项可自由配置，创建出来的是<code>vue-cli3</code>的项目，与<code>cue-cli2</code>项目结构不同，配置方法不同，具体配置方法参考官方文档。而<code>vue init</code>是<code>vue-cli2.x</code>的初始化方式webpack是官方推荐的标准模板名。<br><strong>注意2：</strong> 这里项目名称不能含有大写字母。<br> 回车后会显示如下界面，选择<code>Manually select features</code>，然后回车<br> <img src="https://s3.ax1x.com/2020/12/10/ri8OZ6.jpg"><br> 空格取消<code>Linter / Formatter</code>，然后回车<br> <img src="https://s3.ax1x.com/2020/12/10/ri8xiD.jpg"><br> 我这里选择的是2.x版本，然后一路回车即可，创建成功后如下图所示<br> <img src="https://s3.ax1x.com/2020/12/10/riGkeP.jpg"></p>
 <blockquote>
-<p>创建项目：在指定终端目录下输入<code>vue init webpack my-app</code>,其中<code>my-app</code>为自定义的项目名称。</p>
+<p>运行：从根目录进入项目根目录并运行，终端输入<code>cd myprogram</code>，<code>npm run serve</code></p>
 </blockquote>
-<p><img src="https://s3.ax1x.com/2020/11/17/DVcWP1.jpg"><br>&emsp;&emsp;安装完成后：<br><img src="https://s3.ax1x.com/2020/11/17/DVgSsS.jpg"></p>
-<h3 id="五、运行项目"><a href="#五、运行项目" class="headerlink" title="五、运行项目"></a>五、运行项目</h3><p>&emsp;&emsp;终端进入刚创建的新项目<code>my-app</code>中，然后运行项目。</p>
+<p> <img src="https://s3.ax1x.com/2020/12/10/riGQLq.jpg"><br>浏览器输入<code>http://localhost:8080/</code>,界面如下所示<br><img src="https://s3.ax1x.com/2020/12/10/riGYYF.jpg"><br>想要停止运行的话，在终端界面下按<code>control+C</code>即可</p>
+<h2 id="axios-安装"><a href="#axios-安装" class="headerlink" title="axios 安装"></a>axios 安装</h2><h3 id="安装-axios"><a href="#安装-axios" class="headerlink" title="安装 axios"></a>安装 axios</h3><p>在项目根目录下：</p>
 <blockquote>
-<p>在终端目录my-element下输入<code>cd my-app</code>，然后输入<code>cnpm run dev</code>或者<code>npm run dev</code>。</p>
+<p>安装：终端输入<code>npm install --save axios</code> 即可</p>
 </blockquote>
-<p><img src="https://s3.ax1x.com/2020/11/17/DVg4Fs.jpg"></p>
+<p><img src="https://s3.ax1x.com/2020/12/10/riJChF.jpg"></p>
+<h2 id="vue-router-安装"><a href="#vue-router-安装" class="headerlink" title="vue-router 安装"></a>vue-router 安装</h2><h3 id="安装vue-router"><a href="#安装vue-router" class="headerlink" title="安装vue-router"></a>安装vue-router</h3><p>在项目根目录下：</p>
 <blockquote>
-<p>本地浏览器地址栏输入<code>http://localhost:8080</code>,浏览器将显示以下界面：</p>
+<p>安装：终端输入<code>npm install vue-router</code></p>
 </blockquote>
-<p><img src="https://s3.ax1x.com/2020/11/17/DVgxYR.jpg"></p>
+<p><img src="https://s3.ax1x.com/2020/12/10/riJkc9.jpg"></p>
+<h3 id="配置main-js"><a href="#配置main-js" class="headerlink" title="配置main.js"></a>配置main.js</h3><p>用<code>vscode编译器</code>打开该项目，其目录如下图所示<br><img src="https://s3.ax1x.com/2020/12/10/riNkcQ.jpg"><br>修改main.js</p>
+<ul>
+<li><p>导入vue-router</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> VueRouter <span class="token keyword">from</span> <span class="token string">'vue-router'</span></code></pre>
+</li>
+<li><p>use 一下</p>
+<pre class=" language-js"><code class="language-js">Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>VueRouter<span class="token punctuation">)</span></code></pre>
+</li>
+<li><p>创建路由</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VueRouter</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+     routes<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+         <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//举个例子，若路由地址为····/test,则调用组件名为test的组件</span>
+         path<span class="token punctuation">:</span><span class="token string">'/test'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//路由地址</span>
+         component<span class="token punctuation">:</span> test <span class="token comment" spellcheck="true">//组件名称</span>
+
+         <span class="token punctuation">}</span><span class="token punctuation">,</span>
+     <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span></code></pre>
+</li>
+<li><p>挂载到vue实例</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+render<span class="token punctuation">:</span> h <span class="token operator">=</span><span class="token operator">></span> <span class="token function">h</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span><span class="token punctuation">,</span>
+ <span class="token comment" spellcheck="true">// 挂载到Vue示例上</span>
+ router
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">$mount</span><span class="token punctuation">(</span><span class="token string">'#app'</span><span class="token punctuation">)</span></code></pre>
+<p>修改好后的main.js代码如下</p>
+<pre class=" language-js"><code class="language-js">  <span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+  <span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App.vue'</span>
+
+  Vue<span class="token punctuation">.</span>config<span class="token punctuation">.</span>productionTip <span class="token operator">=</span> <span class="token boolean">false</span>
+
+  <span class="token comment" spellcheck="true">//导入路由</span>
+  <span class="token keyword">import</span> VueRouter <span class="token keyword">from</span> <span class="token string">'vue-router'</span>
+  <span class="token comment" spellcheck="true">//use一下</span>
+  Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>VueRouter<span class="token punctuation">)</span>
+  <span class="token comment" spellcheck="true">// 创建路由</span>
+  <span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VueRouter</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  routes<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//举个例子，若路由地址为····/test,则调用组件名为test的组件</span>
+      path<span class="token punctuation">:</span><span class="token string">'/test'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//路由地址</span>
+      component<span class="token punctuation">:</span> test <span class="token comment" spellcheck="true">//组件名称</span>
+
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  render<span class="token punctuation">:</span> h <span class="token operator">=</span><span class="token operator">></span> <span class="token function">h</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token comment" spellcheck="true">// 挂载到Vue示例上</span>
+  router
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">$mount</span><span class="token punctuation">(</span><span class="token string">'#app'</span><span class="token punctuation">)</span></code></pre>
+</li>
+</ul>
+<h2 id="element-ui-安装"><a href="#element-ui-安装" class="headerlink" title="element-ui 安装"></a>element-ui 安装</h2><h3 id="安装-element-ui"><a href="#安装-element-ui" class="headerlink" title="安装 element-ui"></a>安装 element-ui</h3><p>在项目根目录下：</p>
 <blockquote>
-<p><strong>注意</strong>:在项目运过程中，该终端不可以关闭，关闭后就无法连接到本地端口。停止运行项目可在终端窗口按<code>control</code>+<code>C</code>。</p>
+<p>安装：终端输入<code>npm i element-ui</code></p>
 </blockquote>
-<h3 id="六、安装项目所需要的依赖"><a href="#六、安装项目所需要的依赖" class="headerlink" title="六、安装项目所需要的依赖"></a>六、安装项目所需要的依赖</h3><p>&emsp;&emsp;刚初始化的项目没有依赖，如果在运行中报错，可以输入在终端项目所在目录输入<code>cnpm install</code>或者<code>npm install</code></p>
+<p><img src="https://s3.ax1x.com/2020/12/10/riaEoq.jpg"></p>
+<h3 id="配置main-js-1"><a href="#配置main-js-1" class="headerlink" title="配置main.js"></a>配置main.js</h3><ul>
+<li><p>导入element-ui</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> ElementUI <span class="token keyword">from</span> <span class="token string">'element-ui'</span> <span class="token comment" spellcheck="true">// 导入 Element_ui</span></code></pre>
+</li>
+<li><p>导入 Element-ui 样式</p>
+<pre class=" language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token string">'element-ui/lib/theme-chalk/index.css'</span><span class="token comment" spellcheck="true">// 导入 Element-ui 样式</span></code></pre>
+</li>
+<li><p>use一下</p>
+<pre class=" language-js"><code class="language-js">Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>ElementUI<span class="token punctuation">)</span><span class="token comment" spellcheck="true">// 插件 Element-ui</span></code></pre>
+<p>最终main.js代码如下：</p>
+<pre class=" language-js"><code class="language-js">  <span class="token keyword">import</span> Vue <span class="token keyword">from</span> <span class="token string">'vue'</span>
+  <span class="token keyword">import</span> App <span class="token keyword">from</span> <span class="token string">'./App.vue'</span>
+
+  Vue<span class="token punctuation">.</span>config<span class="token punctuation">.</span>productionTip <span class="token operator">=</span> <span class="token boolean">false</span>
+
+  <span class="token comment" spellcheck="true">// 导入 Element_ui</span>
+  <span class="token keyword">import</span> ElementUI <span class="token keyword">from</span> <span class="token string">'element-ui'</span>
+  <span class="token comment" spellcheck="true">// 导入 Element-ui 样式</span>
+  <span class="token keyword">import</span> <span class="token string">'element-ui/lib/theme-chalk/index.css'</span>
+  <span class="token comment" spellcheck="true">// 插件 Element-ui</span>
+  Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>ElementUI<span class="token punctuation">)</span>
+
+  <span class="token comment" spellcheck="true">//导入路由</span>
+  <span class="token keyword">import</span> VueRouter <span class="token keyword">from</span> <span class="token string">'vue-router'</span>
+  <span class="token comment" spellcheck="true">//use一下</span>
+  Vue<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>VueRouter<span class="token punctuation">)</span>
+  <span class="token comment" spellcheck="true">// 创建路由</span>
+  <span class="token keyword">const</span> router <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VueRouter</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  routes<span class="token punctuation">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//举个例子，若路由地址为····/test,则调用组件名为test的组件</span>
+      path<span class="token punctuation">:</span><span class="token string">'/test'</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">//路由地址</span>
+      component<span class="token punctuation">:</span> test <span class="token comment" spellcheck="true">//组件名称</span>
+
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  render<span class="token punctuation">:</span> h <span class="token operator">=</span><span class="token operator">></span> <span class="token function">h</span><span class="token punctuation">(</span>App<span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token comment" spellcheck="true">// 挂载到Vue示例上</span>
+  router
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">$mount</span><span class="token punctuation">(</span><span class="token string">'#app'</span><span class="token punctuation">)</span></code></pre>
+</li>
+</ul>
 
       </div>
       
@@ -393,7 +492,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/2020/11/17/Vue-cli/" target="_blank" title="Vue脚手架搭建">https://WJWYA.github.io/2020/11/17/Vue-cli/</a>
+    <a href="/2020/12/10/vue项目搭建/" target="_blank" title="vue项目搭建">https://WJWYA.github.io/2020/12/10/vue项目搭建/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -408,18 +507,12 @@
     
       <div class="post-nav">
 
-  <div class="post-nav-prev post-nav-item">
-    <a href="/2020/12/10/vue%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/">
-      上一篇:    vue项目搭建
-    </a>
-  </div>
-
 
 
   <div class="post-nav-next post-nav-item">
-    <a href="/2020/11/13/flex/">
+    <a href="/2020/11/17/Vue-cli/">
       <span>
-        下一篇:    Flex布局 
+        下一篇:    Vue脚手架搭建 
       </span>
     </a>
   </div>
