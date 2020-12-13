@@ -10,7 +10,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>vue项目发布、更新到github | WyaBlog</title>
+  <title>解决vue cli3中axios调用接口的跨域问题 | WyaBlog</title>
   
     
 <link rel="stylesheet" href="/js/aos/aos.css">
@@ -309,10 +309,10 @@
       
 
 
-<div class="post-detail-header" style="background: url(https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2873663940,68904637&amp;fm=26&amp;gp=0.jpg) no-repeat; background-size: cover; 
+<div class="post-detail-header" style="background: url(https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3083032131,4030560483&amp;fm=26&amp;gp=0.jpg) no-repeat; background-size: cover; 
   background-position: center center;">
   
-    <span class="title">vue项目发布、更新到github</span>
+    <span class="title">解决vue cli3中axios调用接口的跨域问题</span>
   
 </div>
 <div class="row justify-center">
@@ -322,7 +322,7 @@
       
       <div class="post-meta">
         <i class="fa fa-clock-o" aria-hidden="true"></i>
-        <span class="post-time">2020-12-10</span>
+        <span class="post-time">2020-12-13</span>
       </div>
       
       <div class="post-tags-categories">
@@ -334,8 +334,12 @@
               vue
             </a>
           
-            <a href="/tags/github/" class="">
-              github
+            <a href="/tags/%E8%B7%A8%E5%9F%9F/" class="">
+              跨域
+            </a>
+          
+            <a href="/tags/%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5/" class="">
+              同源策略
             </a>
           
         </div>
@@ -352,120 +356,51 @@
         
       </div>
       <div class="post-content">
-        <p>&emsp;&emsp;我们可以将vue项目发布、更新到到github上去。首先你应建好了本地的vue项目，其次你还需要一个<a href="https://github.com/" target="_blank" rel="noopener">github账号</a>，并且本地安装了<a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%AE%89%E8%A3%85-Git" target="_blank" rel="noopener">git</a>，然后配置密钥，就不用每次上传时输入用户名和密码了。网上配置密钥的文章有很多，可以自行查阅。</p>
+        <p>&emsp;&emsp;在vue项目中使用axios调用api接口时，有时会在打印界面报错，请求的数据没有渲染在页面上，刷新几次又能回复正常，一直很奇怪不知道原因，百度查了一下才知道是跨域问题。那什么是跨域呢？</p>
 <hr>
-<h2 id="vue-项目发布到github"><a href="#vue-项目发布到github" class="headerlink" title="vue 项目发布到github"></a>vue 项目发布到github</h2><h3 id="在github上创建新的仓库"><a href="#在github上创建新的仓库" class="headerlink" title="在github上创建新的仓库"></a>在github上创建新的仓库</h3><p>在github上新创建一个仓库，并复制好<code>远程库地址</code>，在下面的操作中将会用到该地址。<br><img src="https://s3.ax1x.com/2020/12/10/rF8Vld.jpg"></p>
-<h3 id="上传vue项目"><a href="#上传vue项目" class="headerlink" title="上传vue项目"></a>上传vue项目</h3><p>在vue项目根目录下：</p>
-<ul>
-<li>把该目录变成git可以管理的仓库<blockquote>
-<p>终端输入：<code>git init</code></p>
-</blockquote>
-</li>
-<li>将所有文件添加到暂存区,不要忘记后面的小数点“.”，意思为添加文件夹下的所有文件<blockquote>
-<p>终端输入：<code>git add .</code></p>
-</blockquote>
-</li>
-<li>提交文件到github仓库<blockquote>
-<p>终端输入：<code>git commit -m &quot;提交说明&quot;</code></p>
-</blockquote>
-</li>
-<li>关联到远程库，我创建的该仓库远程库地址为<code>https://github.com/WJWYA/myprogram_vue_demo.github.io.git</code><blockquote>
-<p>终端输入：<code>git remote add origin 远程库地址</code></p>
-</blockquote>
-</li>
-<li>将项目所有文件push到仓库中<blockquote>
-<p>终端输入：<code>git push -u origin master</code></p>
-</blockquote>
-</li>
-</ul>
-<p>整个过程终端显示如下<br><img src="https://s3.ax1x.com/2020/12/10/rFtt8U.jpg"><br>上传vue项目后刷新一下该github仓库，显示如下<br><img src="https://s3.ax1x.com/2020/12/10/rFtUv4.jpg"><br>此时是将整个项目上传到了github，如想生成网址并预览，需要打包vue项目并发布到github</p>
-<h3 id="打包vue项目"><a href="#打包vue项目" class="headerlink" title="打包vue项目"></a>打包vue项目</h3><p>在vue项目根目录下：</p>
+<h2 id="跨域-amp-同源策略"><a href="#跨域-amp-同源策略" class="headerlink" title="跨域&amp;同源策略"></a>跨域&amp;同源策略</h2><p>跨域，是指浏览器不能执行其他网站的脚本。通过阅读了一些资料我知道了导致跨域的罪魁祸首是<a href="https://developer.mozilla.org/zh-CN/docs/Web/Security/Same-origin_policy" target="_blank" rel="noopener">浏览器同源策略</a>，同源策略可以理解为浏览器的一种安全机制，所以跨域问题就是浏览器在搞鬼。那什么情况下会导致跨域呢？官方说<code>如果两个 URL 的 protocol、port (如果有指定的话)和 host 都相同的话，则这两个 URL 是同源。</code>,那意味着三者有一个不同，就会导致跨域问题。举个例子<br>例如下表是与URL<code>https://wjwya.top/webmusicplayer.github.io/dist/#/discovery</code>的源进行对比<br>| URL | 结果 | 原因|<br>| —– |—— | —–|<br>|<a href="https://wjwya.top/webmusicplayer.github.io/dist/#/playlists|%E5%90%8C%E6%BA%90|%E5%8F%AA%E6%9C%89%E8%B7%AF%E5%BE%84%E4%B8%8D%E5%90%8C|" target="_blank" rel="noopener">https://wjwya.top/webmusicplayer.github.io/dist/#/playlists|同源|只有路径不同|</a><br>|<a href="https://wjwya.top/WangY.github.io/|%E5%90%8C%E6%BA%90|%E5%8F%AA%E6%9C%89%E8%B7%AF%E5%BE%84%E4%B8%8D%E5%90%8C|" target="_blank" rel="noopener">https://wjwya.top/WangY.github.io/|同源|只有路径不同|</a><br>|<a href="http://wjwya.top/webmusicplayer.github.io/dist/#/playlists|%E8%B7%A8%E5%9F%9F|%E5%8D%8F%E8%AE%AE%E4%B8%8D%E5%90%8C|" target="_blank" rel="noopener">http://wjwya.top/webmusicplayer.github.io/dist/#/playlists|跨域|协议不同|</a><br>|<a href="https://wjwya.top:81/webmusicplayer.github.io/dist/#/songs|%E8%B7%A8%E5%9F%9F|%E7%AB%AF%E5%8F%A3%E4%B8%8D%E5%90%8C|" target="_blank" rel="noopener">https://wjwya.top:81/webmusicplayer.github.io/dist/#/songs|跨域|端口不同|</a><br>|<a href="https://wjwzj.top/webmusicplayer.github.io/dist/#/songs|%E8%B7%A8%E5%9F%9F|%E4%B8%BB%E6%9C%BA%E4%B8%8D%E5%90%8C|" target="_blank" rel="noopener">https://wjwzj.top/webmusicplayer.github.io/dist/#/songs|跨域|主机不同|</a><br>浏览器一般是针对接口的请求和Dom的查询来实现同源策略</p>
 <blockquote>
-<p>终端输入：<code>npm run build</code></p>
+<p>了解完大概的基础背景之后，下面来说一下我遇到的问题，由于报错的时候我没有截图，于是从网上找了相似的报错截图如下：</p>
 </blockquote>
-<p>该操作会在vue根目录下生成dist文件夹，即项目的静态资源<br><img src="https://s3.ax1x.com/2020/12/10/rFNKJK.jpg"><br><strong>注意</strong>：打开dist文件夹下的<code>index.html</code>,若为空白页，说明路径存在问题。<br><strong>解决方法：</strong></p>
-<ul>
-<li>在<code>package.json</code>文件的同级目录下创建<code>vue.config.js</code>文件，在该文件输入以下内容并保存<pre class=" language-js"><code class="language-js">module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
-    publicPath<span class="token punctuation">:</span> <span class="token string">'./'</span>
-<span class="token punctuation">}</span></code></pre>
-</li>
-<li>若为了在地址中不显示<code>#</code>,在路由里添加了<code>history</code>模式的，需要将其注释掉，不然github依然无法正确读取路径。</li>
-<li><blockquote>
-<p>再次终端输入：<code>npm run build</code></p>
-</blockquote>
-</li>
-</ul>
-<p>此时再查看dist文件夹下的<code>index.html</code>,是不是可以正常打开啦~<br><img src="https://s3.ax1x.com/2020/12/10/rFaEU1.jpg"><br><strong>注意</strong>：这是我在本地打开的网页，要想生成一个在线的地址，需要将dist文件上传到github</p>
-<h3 id="上传可预览的vue项目"><a href="#上传可预览的vue项目" class="headerlink" title="上传可预览的vue项目"></a>上传可预览的vue项目</h3><p>这里需要把dist文件夹上传到远程仓库的另一个分支<code>gh-pages</code>(我目前还没搞清楚是否可以直接将dist上传到master分支，暂且先传到gh-pages分支吧),在vue项目根目录下：</p>
-<ul>
-<li>创建分支并切换<blockquote>
-<p>终端输入：<code>git checkout -b gh-pages</code></p>
-</blockquote>
-</li>
-<li>将dist文件添加到暂存区，加<code>-f</code>强制提交<blockquote>
-<p>终端输入：<code>git add -f dist</code></p>
-</blockquote>
-</li>
-<li>提交文件到github仓库<blockquote>
-<p>终端输入：<code>git commit -m &quot;提交dist到gh-pages&quot;</code></p>
-</blockquote>
-</li>
-<li>push文件到仓库中<blockquote>
-<p>终端输入：<code>git push origin gh-pages</code></p>
-</blockquote>
-</li>
-</ul>
-<p>整个过程终端显示如下<br><img src="https://s3.ax1x.com/2020/12/10/rFd7wj.jpg"><br>上传dist文件后刷新一下该github仓库，切换分支到<code>gh-pages</code>，发现dist文件上传成功<br><img src="https://s3.ax1x.com/2020/12/10/rFdLYq.jpg"><br>在该github仓库中打开<code>Settings</code>,下滑找到<code>GitHub Pages</code>,发现他已经将网站发布到一个网址上<br><img src="https://s3.ax1x.com/2020/12/10/rFwa7j.jpg"></p>
-<p>但是点击这个地址后并不是我们想要界面，要解决这个问题只需要在网址后面加上<code>dist</code>即可，然后我们的项目就可以通过<a href="http://wjwya.top/myprogram_vue_demo.github.io/dist/#/" target="_blank" rel="noopener">网址</a>访问啦<del>~</del><br><img src="https://s3.ax1x.com/2020/12/10/rFwguF.jpg"></p>
-<h2 id="vue-项目更新到github"><a href="#vue-项目更新到github" class="headerlink" title="vue 项目更新到github"></a>vue 项目更新到github</h2><p>&emsp;&emsp;如果我们对项目进行了更改，那就需要把项目更新到github上~首先更新项目本身，然后重新build一下静态资源，最后把静态资源也更新到github</p>
-<h3 id="更新vue项目"><a href="#更新vue项目" class="headerlink" title="更新vue项目"></a>更新vue项目</h3><p>在vue项目根目录下的<code>master</code>分支下：</p>
-<ul>
-<li>查看当前仓库状态<blockquote>
-<p>终端输入：<code>git status</code></p>
-</blockquote>
-</li>
-<li>更新全部<blockquote>
-<p>终端输入：<code>git add *</code></p>
-</blockquote>
-</li>
-<li>提交文件并输入更新说明<blockquote>
-<p>终端输入：<code>git commit -m &quot;更新了一条数据&quot;</code></p>
-</blockquote>
-</li>
-<li>拉取当前分支，将github上的代码当下来合并代码，防止与提交的新代码起冲突<blockquote>
-<p>终端输入：<code>git pull</code></p>
-</blockquote>
-</li>
-<li>push文件到远程仓库中<blockquote>
-<p>终端输入：<code>git push origin master</code></p>
-</blockquote>
-</li>
-</ul>
-<p>刷新github仓库，切换到<code>master</code>分支，项目已经更新成功<br><img src="https://s3.ax1x.com/2020/12/10/rFrPKK.jpg"></p>
-<h3 id="打包vue项目-1"><a href="#打包vue项目-1" class="headerlink" title="打包vue项目"></a>打包vue项目</h3><p>  在vue项目根目录下的<code>gh-pages</code>分支下：</p>
-<blockquote>
-<p>终端输入：<code>npm run build</code></p>
-</blockquote>
-<h3 id="更新可预览的vue项目"><a href="#更新可预览的vue项目" class="headerlink" title="更新可预览的vue项目"></a>更新可预览的vue项目</h3><p>在vue项目根目录下的<code>gh-pages</code>分支下：</p>
-<ul>
-<li>将dist文件添加到暂存区，加<code>-f</code>强制提交<blockquote>
-<p>终端输入：<code>git add -f dist</code></p>
-</blockquote>
-</li>
-<li>提交文件到github仓库<blockquote>
-<p>终端输入：<code>git commit -m &quot;更新了一条数据&quot;</code></p>
-</blockquote>
-</li>
-<li>拉取当前分支<blockquote>
-<p>终端输入：<code>git pull</code></p>
-</blockquote>
-</li>
-<li>push文件到仓库中<blockquote>
-<p>终端输入：<code>git push origin gh-pages</code></p>
-</blockquote>
-</li>
-</ul>
-<p>刷新github仓库，切换到<code>ph-pages</code>分支，我们更新的内容已经上传成功了~<br><img src="https://s3.ax1x.com/2020/12/10/rFBOfI.jpg"><br>我们刷新一下网址，更新的内容也显示在了<a href="http://wjwya.top/myprogram_vue_demo.github.io/dist/#/" target="_blank" rel="noopener">网页</a>中了~<br><img src="https://s3.ax1x.com/2020/12/10/rFBv1P.jpg"></p>
+<p><img src="https://img2020.cnblogs.com/blog/451237/202007/451237-20200715153621410-256712678.png"><br>于是相关资料后使用了较为简单的设置代理进行跨域，然后在开发环境（本地）测试发现完美的解决了跨域问题，打包上线后全**蹦了，一个接口都没调用出来，没记错的话是报的404错误。折腾了好久终于找到了解决生产环境（服务器）的跨域问题。</p>
+<h2 id="解决开发环境（本地）跨域问题"><a href="#解决开发环境（本地）跨域问题" class="headerlink" title="解决开发环境（本地）跨域问题"></a>解决开发环境（本地）跨域问题</h2><p>之前在该项目打包上线时，我已经在<code>package.json</code>同级目录下创建了一个叫<code>vue.config.js</code>的文件（见：<a href="https://wjwya.top/2020/12/10/vue%E9%A1%B9%E7%9B%AE%E5%8F%91%E5%B8%83%E3%80%81%E6%9B%B4%E6%96%B0%E5%88%B0github/" target="_blank" rel="noopener">vue项目发布、更新到github</a>），在<code>vue.config.js</code>文件中输入一下代码</p>
+<pre class=" language-js"><code class="language-js">devServer<span class="token punctuation">:</span><span class="token punctuation">{</span>
+
+    proxy<span class="token punctuation">:</span><span class="token punctuation">{</span>
+     <span class="token string">'/api'</span><span class="token punctuation">:</span><span class="token punctuation">{</span>                  <span class="token comment" spellcheck="true">//对 /api开头的接口进行代理</span>
+        target<span class="token punctuation">:</span><span class="token string">"要代理的地址"</span><span class="token punctuation">,</span>   <span class="token comment" spellcheck="true">//API服务器的地址,例如为https://autumnfish.cn</span>
+        ws<span class="token punctuation">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>               <span class="token comment" spellcheck="true">//代理websockets</span>
+        changeOrigin<span class="token punctuation">:</span><span class="token boolean">true</span><span class="token punctuation">,</span>     <span class="token comment" spellcheck="true">//虚拟的站点需要更换origin</span>
+        pathRewrite<span class="token punctuation">:</span><span class="token punctuation">{</span>          <span class="token comment" spellcheck="true">//重写路径</span>
+          <span class="token string">'^/api'</span><span class="token punctuation">:</span><span class="token string">''</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span></code></pre>
+<p>在<code>main.js</code>中输入一下代码</p>
+<pre class=" language-js"><code class="language-js">Vue<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>$axios <span class="token operator">=</span> axios      <span class="token comment" spellcheck="true">//在只有一个代理地址的情况下可以设置统一的baseURL</span>
+axios<span class="token punctuation">.</span>defaults<span class="token punctuation">.</span>baseURL <span class="token operator">=</span>  <span class="token string">'/api'</span> <span class="token comment" spellcheck="true">//这样之后所有的接口以代理地址开头的部分全部省略</span></code></pre>
+<p>举个例子</p>
+<pre class=" language-js"><code class="language-js"><span class="token function">axios</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    url<span class="token punctuation">:</span><span class="token string">"https://autumufish.cn/banner"</span><span class="token punctuation">,</span>
+    method<span class="token punctuation">:</span><span class="token string">"get"</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>res<span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">//就写成</span>
+<span class="token function">axios</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    url<span class="token punctuation">:</span><span class="token string">"/banner"</span><span class="token punctuation">,</span>
+    method<span class="token punctuation">:</span><span class="token string">"get"</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>res<span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true">//省略掉https://autumufish.cn</span></code></pre>
+<p>此时已经解决了开发环境（本地）的跨域问题啦~<br>通过浏览器我们可以查看请求的地址为<code>https://localhost:8080/api/banner</code>,但实际上请求的url为<code>https://autumufish.cn/banner</code><br><img src="https://s3.ax1x.com/2020/12/13/reWLin.jpg"></p>
+<h2 id="解决生产环境（服务器）跨域问题"><a href="#解决生产环境（服务器）跨域问题" class="headerlink" title="解决生产环境（服务器）跨域问题"></a>解决生产环境（服务器）跨域问题</h2><p>虽然此时已经解决了在开发环境（本地）的跨域问题，但当把项目发布到服务器端使，所有的接口均报错404的错误，为解决该问题，仅需修改<code>main.js</code>,修改一条语句即可：</p>
+<pre class=" language-js"><code class="language-js">Vue<span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>$axios <span class="token operator">=</span> axios      <span class="token comment" spellcheck="true">//在只有一个代理地址的情况下可以设置统一的baseURL</span>
+<span class="token comment" spellcheck="true">//axios.defaults.baseURL =  '/api' //这样之后所有的接口以代理地址开头的部分全部省略</span>
+axios<span class="token punctuation">.</span>defaults<span class="token punctuation">.</span>baseURL <span class="token operator">=</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span>NODE_ENV <span class="token operator">===</span> <span class="token string">"production"</span> <span class="token operator">?</span> <span class="token string">"https://autumnfish.cn"</span> <span class="token punctuation">:</span>  <span class="token string">'/api'</span><span class="token comment" spellcheck="true">//该语句判断当前如果是在开发环境下，就将baseURL设置为后面的地址，如果不是，就继续使用设置好的api代理</span></code></pre>
+<p>此时已经解决了生产环境（服务器）的跨域问题啦~</p>
 
       </div>
       
@@ -476,7 +411,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/2020/12/10/vue项目发布、更新到github/" target="_blank" title="vue项目发布、更新到github">https://WJWYA.github.io/2020/12/10/vue项目发布、更新到github/</a>
+    <a href="/2020/12/13/vue-cli3解决跨域问题/" target="_blank" title="解决vue cli3中axios调用接口的跨域问题">https://WJWYA.github.io/2020/12/13/vue-cli3解决跨域问题/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -491,18 +426,12 @@
     
       <div class="post-nav">
 
-  <div class="post-nav-prev post-nav-item">
-    <a href="/2020/12/13/vue-cli3%E8%A7%A3%E5%86%B3%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/">
-      上一篇:    解决vue cli3中axios调用接口的跨域问题
-    </a>
-  </div>
-
 
 
   <div class="post-nav-next post-nav-item">
-    <a href="/2020/12/10/vue%E9%A1%B9%E7%9B%AE%E6%90%AD%E5%BB%BA/">
+    <a href="/2020/12/10/vue%E9%A1%B9%E7%9B%AE%E5%8F%91%E5%B8%83%E3%80%81%E6%9B%B4%E6%96%B0%E5%88%B0github/">
       <span>
-        下一篇:    vue项目搭建 
+        下一篇:    vue项目发布、更新到github 
       </span>
     </a>
   </div>
